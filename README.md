@@ -1,0 +1,2 @@
+# kaupunkiseutusuunnitelma
+Kaupunkiseutusuunnitelman tietomalli

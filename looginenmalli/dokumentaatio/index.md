@@ -5,7 +5,7 @@ id: "dokumentaatio"
 status: "Keskeneräinen"
 ---
 
-# Loogisen tason kapunkiseutusuunnitelman tietomalli
+# Loogisen tason kaupunkiseutusuunnitelman tietomalli
 {:.no_toc}
 
 1. 

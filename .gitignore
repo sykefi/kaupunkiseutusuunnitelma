@@ -1,0 +1,6 @@
+#
+.DS_Store
+.sass-cache
+looginenmalli/uml/doc/index.html
+looginenmalli/uml/*.ldb
+

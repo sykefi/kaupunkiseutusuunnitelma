@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Kaupunkiseutusuunnitelma</title>
+<link href="../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5.png" usemap="#EA5" border="0" />
+
+<MAP NAME="EA5">
+<area shape="rect" coords="107,1293,298,1430" href="../EA2/EA68.html" target="_self">
+<area shape="rect" coords="1319,983,1485,1068" href="../EA2/EA57.html" target="_self">
+<area shape="rect" coords="107,1130,298,1241" href="EA21.html" target="_self">
+<area shape="rect" coords="1550,673,1763,825" href="../EA2/EA105.html" target="_self">
+<area shape="rect" coords="130,999,274,1069" href="EA9.html" target="_self">
+<area shape="rect" coords="1535,975,1701,1076" href="EA14.html" target="_self">
+<area shape="rect" coords="1318,1258,1485,1343" href="EA15.html" target="_self">
+<area shape="rect" coords="1404,852,1595,922" href="../EA2/EA102.html" target="_self">
+<area shape="rect" coords="1070,1185,1256,1262" href="EA17.html" target="_self">
+<area shape="rect" coords="933,738,1169,807" href="EA13.html" target="_self">
+<area shape="rect" coords="642,710,869,834" href="EA19.html" target="_self">
+<area shape="rect" coords="639,885,871,1009" href="EA12.html" target="_self">
+<area shape="rect" coords="606,1086,835,1210" href="EA20.html" target="_self">
+<area shape="rect" coords="767,1255,999,1379" href="EA10.html" target="_self">
+<area shape="rect" coords="64,753,307,935" href="EA18.html" target="_self">
+<area shape="rect" coords="64,467,307,649" href="EA16.html" target="_self">
+<area shape="rect" coords="430,555,709,632" href="EA11.html" target="_self">
+<area shape="rect" coords="765,101,951,213" href="../EA2/EA75.html" target="_self">
+<area shape="rect" coords="785,559,933,627" href="../EA2/EA92.html" target="_self">
+<area shape="rect" coords="769,377,949,467" href="../EA2/EA109.html" target="_self">
+<area shape="rect" coords="1319,1125,1485,1185" href="../EA2/EA103.html" target="_self">
+<area shape="rect" coords="949,885,1211,1101" href="../EA2/EA108.html" target="_self">
+<area shape="rect" coords="985,459,1248,706" href="../EA2/EA96.html" target="_self">
+<area shape="rect" coords="1167,82,1415,329" href="../EA2/EA86.html" target="_self">
+<area shape="rect" coords="1522,534,1763,604" href="../EA2/EA67.html" target="_self">
+<area shape="rect" coords="1522,435,1763,496" href="../EA2/EA65.html" target="_self">
+<area shape="rect" coords="1498,82,1787,368" href="../EA2/EA63.html" target="_self">
+<area shape="rect" coords="430,178,674,235" href="../EA2/EA64.html" target="_self">
+<area shape="rect" coords="430,279,674,348" href="../EA2/EA66.html" target="_self">
+<area shape="rect" coords="70,121,307,407" href="../EA2/EA61.html" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Kaupunkiseutusuunnitelma : Class diagram</div>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">6/1/2022 10:30:53 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/3/2022 5:19:50 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">ior</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{FD866A63-501C-4711-B127-D9E9C0240D73}</td>
+		</tr>
+	</table>
+	
+</div>
+ 
+</body>
+</html>

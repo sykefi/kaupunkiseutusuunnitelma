@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="windows-1252"?>
-<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3" timestamp="2022-06-10 15:01:43">
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3" timestamp="2022-06-10 15:10:37">
 	<XMI.header>
 		<XMI.documentation>
 			<XMI.exporter>Enterprise Architect</XMI.exporter>
@@ -13,7 +13,7 @@
 				<UML:Class name="EARootClass" xmi.id="EAID_11111111_5487_4080_A7F4_41526CB0AA00" isRoot="true" isLeaf="false" isAbstract="false"/>
 				<UML:Package name="Kaupunkiseutusuunnitelma" xmi.id="EAPK_EF0ACACC_162A_4434_9B27_67E46F653E25" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
 					<UML:ModelElement.stereotype>
-						<UML:Stereotype xmi.idref="EAID_57AF10ED_3AF9_4ed0_B9D9_7FB5B6E0DBBE"/>
+						<UML:Stereotype xmi.idref="EAID_6D7D9632_6946_47a7_8627_93603EFD7D6D"/>
 					</UML:ModelElement.stereotype>
 					<UML:ModelElement.taggedValue>
 						<UML:TaggedValue tag="parent" value="EAPK_80CF96CA_2BD6_4a79_A7E4_3CDD9388AD91"/>
@@ -22,7 +22,7 @@
 						<UML:TaggedValue tag="iscontrolled" value="1"/>
 						<UML:TaggedValue tag="xmlpath" value="Z:\kaupunkiseutusuunnitelma\looginenmalli\uml\kaupunkiseutusuunnitelma.xml"/>
 						<UML:TaggedValue tag="lastloaddate" value="2022-06-09 15:49:19"/>
-						<UML:TaggedValue tag="lastsavedate" value="2022-06-10 15:01:43"/>
+						<UML:TaggedValue tag="lastsavedate" value="2022-06-10 15:10:37"/>
 						<UML:TaggedValue tag="version" value="1.0"/>
 						<UML:TaggedValue tag="isprotected" value="0"/>
 						<UML:TaggedValue tag="usedtd" value="0"/>
@@ -2324,7 +2324,7 @@
 								<UML:TaggedValue tag="version" value="1.0"/>
 								<UML:TaggedValue tag="package" value="EAPK_EF0ACACC_162A_4434_9B27_67E46F653E25"/>
 								<UML:TaggedValue tag="date_created" value="2022-06-01 14:03:01"/>
-								<UML:TaggedValue tag="date_modified" value="2022-06-10 14:51:42"/>
+								<UML:TaggedValue tag="date_modified" value="2022-06-10 15:10:11"/>
 								<UML:TaggedValue tag="gentype" value="Java"/>
 								<UML:TaggedValue tag="tagged" value="0"/>
 								<UML:TaggedValue tag="package_name" value="Kaupunkiseutusuunnitelma"/>
@@ -2341,7 +2341,7 @@
 								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={259E8EA2-ABE2-4c5e-AF7A-36E3F12B61EC}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=FeatureType;FQName=GML::FeatureType;@ENDSTEREO;$DES;$CLT={B7869EE8-491A-4de1-A7E0-15960B6181A6}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 							</UML:ModelElement.taggedValue>
 							<UML:ModelElement.constraint>
-								<UML:Constraint name="elinkaaritila.oclIsKindOf(KaupunkiseutusuunnitelmanElinkaaritila)">
+								<UML:Constraint name="elinkaaritila.oclIsTypeOf(KaupunkiseutusuunnitelmanElinkaaritila)">
 									<UML:ModelElement.taggedValue>
 										<UML:TaggedValue tag="type" value="OCL"/>
 										<UML:TaggedValue tag="weight" value="0.00"/>
@@ -2947,7 +2947,7 @@
 						</UML:Generalization>
 					</UML:Namespace.ownedElement>
 				</UML:Package>
-				<UML:Stereotype xmi.id="EAID_57AF10ED_3AF9_4ed0_B9D9_7FB5B6E0DBBE" name="ApplicationSchema" isRoot="false" isLeaf="false" isAbstract="false">
+				<UML:Stereotype xmi.id="EAID_6D7D9632_6946_47a7_8627_93603EFD7D6D" name="ApplicationSchema" isRoot="false" isLeaf="false" isAbstract="false">
 					<UML:Stereotype.baseClass>Package</UML:Stereotype.baseClass>
 				</UML:Stereotype>
 			</UML:Namespace.ownedElement>

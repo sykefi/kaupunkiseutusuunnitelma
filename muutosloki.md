@@ -6,7 +6,6 @@ id: "muutosloki"
 # Muutosloki
 {:.no_toc}
 
-1. 
-{:toc}
+## 10.6.2022
 
-TODO
+* Korvattu OsallistumisJaArviointisuunnitelma-luokka Yhteiset tietokomponentit -paketin samalla luokalla

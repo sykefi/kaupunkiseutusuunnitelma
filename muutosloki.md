@@ -6,7 +6,14 @@ id: "muutosloki"
 # Muutosloki
 {:.no_toc}
 
+## 30.8.2022
+
+* Lisätty uudet luokat Toimintokohde ja Kehittämisvyöhyke, muutettu niiden yhteinen yläluokka Suunnitelmakohde abstraktiksi. Suunnitelmakohde-luokan attribuutit toiminto, sijainninTulkintatapa, kohteenLaji ja elinkaaritila on siirretty Toimintokohde-luokkaan.
+* Poistettu Muutosajuri-luokka kokonaan, käsite toteutuu kuvaamalla muutosajurit selostuksessa.
+* Luotu uusi luokka Vuorovaikutussuunnitelma korvaamaan OsallistumisJaArviointisuunnitelma-luokan, sama tietosisältö, eri määritelmä. Attribuutti Kaupunkiseutusuunnitelma.osallistumisJaArviointisuunnitelma uudelleennimetty vuorovaikutussuunnitelma-nimiseksi.
+
 ## 22.6.2022
+
 * Uudelleennimetty Suunnittelukohde -> Suunnitelmakohde. Neutraali kohteen kehittämisen osalta.
 * Uudelleennimetty koodisto SuunnittelukohteenLaji -> KohteenLaji
 * Lisätty kahdensuuntainen assosiaatio KaupunkiseudunMuutosajuri <-> Tavoite

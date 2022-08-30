@@ -11,6 +11,9 @@ id: "muutosloki"
 * Lisätty uudet luokat Toimintokohde ja Kehittämisvyöhyke, muutettu niiden yhteinen yläluokka Suunnitelmakohde abstraktiksi. Suunnitelmakohde-luokan attribuutit toiminto, sijainninTulkintatapa, kohteenLaji ja elinkaaritila on siirretty Toimintokohde-luokkaan.
 * Poistettu Muutosajuri-luokka kokonaan, käsite toteutuu kuvaamalla muutosajurit selostuksessa.
 * Luotu uusi luokka Vuorovaikutussuunnitelma korvaamaan OsallistumisJaArviointisuunnitelma-luokan, sama tietosisältö, eri määritelmä. Attribuutti Kaupunkiseutusuunnitelma.osallistumisJaArviointisuunnitelma uudelleennimetty vuorovaikutussuunnitelma-nimiseksi.
+* Poistettu assosiaatio Kaupunkiseutusuunnitelma.osallinen tarpeettomana.
+* Korjattu Kehittämistoimenpide- ja Tavoite-luokkien Suunnittelukohde-luokkaan liitetyt rajoitukset Suunnitelmakohde-luokkaan. 
+* Tuotettu tekstimuotoinen UML-luokkien dokumentaatio.
 
 ## 22.6.2022
 

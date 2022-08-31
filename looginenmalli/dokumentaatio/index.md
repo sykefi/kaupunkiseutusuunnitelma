@@ -305,7 +305,7 @@ Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 toiminto         | [KohteenToiminto](#kohteentoiminto) | 0..*        | Kohteeseen liitetyt toiminnot.
 kohteenLaji      | [KohteenLaji](#kohteenlaji) | 1       | Kohteen luokkka.
-sijainninTulkintatapa | [SijainninTulkintatavanLaji](#sijainnintullkintatavanlaji) | 1 | Kuvaa miten kohteen geometria tulisi tulkita.
+sijainninTulkintatapa | [SijainninTulkintatavanLaji](#sijainnintulkintatavanlaji) | 1 | Kuvaa miten kohteen geometria tulisi tulkita.
 elinkaaritila    | [KohteenElinkaaritila](#kohteenelinkaaritila) | 0..1 | Kohteen olemassaolotieto suunnitelman laadinnan aikana. 
 
 ### Kehittämisvyöhyke

@@ -2,7 +2,7 @@
 layout: "default"
 description: ""
 id: "dokumentaatio"
-status: "Ehdotus"
+status: "Keskeneräinen"
 ---
 
 # Loogisen tason kaupunkiseutusuunnitelman tietomalli
@@ -326,7 +326,7 @@ Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 toteutusaikataulu | [Aikataulu](#aikataulu) | 0..1       | Toimenpiteen toteuttamisen aikataulu.
 kuvaus           | [LanguageString](#languagestring) | 0..* | Toimenpiteen sanallinen kuvaus.
-teema            | [KaupunkiseutusuunnittelunTeema](#kaupunkiseutusuunnittelunTeema) | 0..* | Teemaluokittelu.
+teema            | [KaupunkiseutusuunnittelunTeema](#kaupunkiseutusuunnittelunteema) | 0..* | Teemaluokittelu.
 
 **Assosiaatiot**
 
@@ -349,7 +349,7 @@ Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 toteutumisaikataulu | [Aikataulu](#aikataulu) | 0..1       | Tavoitteen toteutumisen tavoiteaikataulu.
 kuvaus           | [LanguageString](#languagestring) | 0..* | Tavoitteen sanallinen kuvaus.
-teema            | [KaupunkiseutusuunnittelunTeema](#kaupunkiseutusuunnittelunTeema) | 0..* | Teemaluokittelu.
+teema            | [KaupunkiseutusuunnittelunTeema](#kaupunkiseutusuunnittelunteema) | 0..* | Teemaluokittelu.
 
 **Assosiaatiot**
 
@@ -381,8 +381,8 @@ Kuvaa käsitteen [Mittaustapahtuma](../../kasitemalli/#mittaustapahtuma).
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-mittausAika      | [TM_Object](#tmobject) | 0..1         | Ajanhetki tai aikaväli, jonka aikaista suureen arvoa mittauksen tai arvioinnin tulos kuvaa. Vastaa OMS-standardin ```phenomenonTime```-attribuuttia.
-tulosAika        | [TM_Instant](#tminstant) | 1          | Ajanhetki, jolloin mittauksen tulos on kirjattu muistiin tai julkaistu. Vastaa OMS-standardin ```resultTime```-attribuuttia.
+mittausAika      | [TM_Object](#tm_object) | 0..1         | Ajanhetki tai aikaväli, jonka aikaista suureen arvoa mittauksen tai arvioinnin tulos kuvaa. Vastaa OMS-standardin ```phenomenonTime```-attribuuttia.
+tulosAika        | [TM_Instant](#tm_instant) | 1          | Ajanhetki, jolloin mittauksen tulos on kirjattu muistiin tai julkaistu. Vastaa OMS-standardin ```resultTime```-attribuuttia.
 tulos            | [SuureenArvo](#suureenarvo) | 1       | Mittauksen tuloksena saatu suureen arvo. Vastaa OMS-standardin ```result```-assosiaatiota ja ```observedProperty```-attribuuttia yhdessä.
 
 **Assosiaatiot**
@@ -437,8 +437,8 @@ Aikaväli, jonka aikana jotakin on määrä tapahtua tai jonkin [Tietoyksikön](
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 otsikko          | [LanguageString](#languagestring) | 0..* | Vaiheen nimi.
-aloitusAika      | [TM_Instant](#tminstant) | 0..1       | Aikavälin alku.
-päättymisAika    | [TM_Instant](#tminstant) | 0..1       | Aikavälin loppu.
+aloitusAika      | [TM_Instant](#tm_instant) | 0..1       | Aikavälin alku.
+päättymisAika    | [TM_Instant](#tm_instant) | 0..1       | Aikavälin loppu.
 kuvaus           | [LanguageString](#languagestring) | 0..* | Vaiheen sanallinen kuvaus.
 tavoitearvo      | [AbstraktiSuureenArvo](#abstraktisuureenarvo) | Suureen arvo, joka on määrä saavuttaa vaiheen aikana.
 
@@ -464,12 +464,15 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
 
+{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+
 #### KaupunkiseutusuunnitelmanAsiakirjanLaji
 
 Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
 
+{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
 
 #### SeudullisenTietoaineistonLaji
 
@@ -477,12 +480,15 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open)
 
+{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
 
 #### KaupunkiseutusuunnitelmanVuorovaikutustapahtumanLaji
 
 Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
+
+{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
 
 #### KaupunkiseutusuunnitelmanKäsittelytapahtumanLaji
 
@@ -496,11 +502,15 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
 
+{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+
 #### KohteenLaji
 
 Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
+
+{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
 
 #### KaupunkiseutusuunnittelunTeema
 
@@ -508,12 +518,15 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open)
 
+{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+
 #### Toimintolaji
 
 Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open)
 
+{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
 
 #### ElinkaarimuutoksenLaji
 
@@ -521,12 +534,15 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
 
+{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+
 #### KohteenElinkaaritila
 
 Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
 
+{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
 
 [ISO-8601-1]: https://www.iso.org/standard/70907.html "ISO 8601-1:2019 Date and time — Representations for information interchange — Part 1: Basic rules"
 [ISO-639-2]: https://www.iso.org/standard/4767.html "ISO 639-2:1998 Codes for the representation of names of languages — Part 2: Alpha-3 code"

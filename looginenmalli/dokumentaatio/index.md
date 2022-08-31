@@ -2,7 +2,7 @@
 layout: "default"
 description: ""
 id: "dokumentaatio"
-status: "Keskeneräinen"
+status: "Ehdotus"
 ---
 
 # Loogisen tason kaupunkiseutusuunnitelman tietomalli
@@ -297,7 +297,7 @@ Perityn attribuutin ```geometria``` kardinaliteetti on rajoitettu yhteen (attrib
 
 Erikoistaa luokkaa [Suunnitelmakohde](#suunnitelmakohde), stereotyyppi: FeatureType (kohdetyyppi).
 
-Kuvaa käsitteen [Toimintokohde](../../kasitemalli/#toimintokohde).
+Konkreettinen suunnitelmakohde, johon liittyy kehitettäviä, uusia ja väistyviä toimintoja.
 
 **Ominaisuudet**
 
@@ -312,8 +312,7 @@ elinkaaritila    | [KohteenElinkaaritila](#kohteenelinkaaritila) | 0..1 | Kohtee
 
 Erikoistaa luokkaa [Suunnitelmakohde](#suunnitelmakohde), stereotyyppi: FeatureType (kohdetyyppi).
 
-Kuvaa käsitteen [Kehittämisvyöhyke](../../kasitemalli/#kehittämisvyöhyke).
-
+Suunnitelmakohde, joka kuvaa suunnitelmaan sisältyvää kehitettävää aluetta, vyöhykettä tai linjaa.
 
 ### Kehittämistoimenpide
 
@@ -342,7 +341,7 @@ Peritty assosiaatio ```kohdistus``` on rajoitettu viittaamaan vain [Suunnitelmak
 
 Erikoistaa luokkaa [Tietoyksikkö](#tietoyksikkö), stereotyyppi: FeatureType (kohdetyyppi).
 
-Kuvaa käsitteen [Suunnitelman tavoite](../../kasitemalli/#suunnitelman-tavoite).
+Kuvaa käsitteen [Tavoite](../../kasitemalli/#tavoite).
 
 **Ominaisuudet**
 

@@ -6,6 +6,17 @@ id: "muutosloki"
 # Muutosloki
 {:.no_toc}
 
+## 7.9.2022
+
+* Poistettu Toimintokohde ja Kehittämisvyöhyke, muutettu niiden yhteinen yläluokka Suunnitelmakohde takaisin ei-abstraktiksi. Toimintokohde-luokan attribuutit toiminto ja elinkaaritila on siirretty takaisin Suunnitelmakohde-luokkaan.
+* KohteenToiminto-luokkaan lisätty uusi attribuutti infrastruktuurilaji ja sille koodisto Infrastruktuurilaji.
+* KohteenToiminto.toimintolaji ei enää ole pakollinen.
+* Lisätty assosiaatiot kohdistettuPeriaate ja kohdistettuTavoite. Nämä ovat nyt ainoa tapa yhdistää kehittämisperiaatteet ja tavoitteet (toimintojen kautta) suunnitelmakohteisiin.
+* Lisätty uusi attribuutti Suunnitelmakohde.kehittämisenOhjelmointi:SuunniteltuToimenpide ja uusi DataType-luokka SuunniteltuToimenpide.
+* Poistettu assosiaatio Suunnitelmakohde.kohdistettuToimenpide -> Kehittämistoimenpide ja Suunnitelmakohde.liittyväTavoite -> Tavoite.
+* Muutettu Kehittämistoimenpide-luokan nimeksi Kehittämisperiaate, ja lisätty attribuutti laji:KehittämisperiaatteenLaji.
+* Kielletty kohdistus-assosiaation käyttö Kehittämisperiaate- ja Tavoite-luokilta (rajoitus).
+
 ## 31.8.2022
 
 * Lisätty käsitemallin kuvaus, tarkennettu loogisen tietomallin kuvausta.

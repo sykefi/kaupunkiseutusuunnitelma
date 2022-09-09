@@ -58,10 +58,6 @@ Katso {% include common/moduleLink.html moduleId="yhteisetkomponentit" path="loo
 
 Katso {% include common/moduleLink.html moduleId="yhteisetkomponentit" path="looginenmalli/dokumentaatio/#toimija" title="Yhteiset tietokomponentit::Toimija" %}.
 
-#### Organisaatio
-
-Katso {% include common/moduleLink.html moduleId="yhteisetkomponentit" path="looginenmalli/dokumentaatio/#organisaatio" title="Yhteiset tietokomponentit::Organisaatio" %}.
-
 #### HallinnollinenAlue
 
 Katso {% include common/moduleLink.html moduleId="yhteisetkomponentit" path="looginenmalli/dokumentaatio/#hallinnollinenalue" title="Yhteiset tietokomponentit::HallinnollinenAlue" %}.
@@ -237,9 +233,9 @@ Roolinimi        | Kohde               | Kardinaliteetti | Kuvaus
 vuorovaikutussuunnitelma | [Vuorovaikutussuunnitelma](#vuorovaikutussuunnitelma) | 0..1 | Kaupunkiseutusuunnitelman laadintavaiheen vuorovaikutuksen suunnitelma.
 selostus         | [SuunnitelmanSelostus](#suunnitelmanselostus) | 0..1 | Kaupunkiseutusuunnitelman selostusosa.
 suunnitelmanTavoite | [Tavoite](#tavoite) | 0..*         | Suunnitelmaan sisältyvä tavoite.
-suunnitelmanToimenpide | [Kehittämistoimenpide](#kehittämistoimenpide) | 0..* | Suunnitelmaan sisältyvä toimenpide.
-suunnitelmanKohde | [Suunnitelmakohde](#suunnitelmakohde) | 0..* | Suunnitelman paikkatietokohde, johon sen tavoitteita ja toimenpiteitä voidaan kohdistaa.
-laatija          | [Organisaatio](#organisaatio) | 0..*            | Suunnitelman laatijaorganisaatio.
+kehittämisperiaate | [YleinenKehittämisperiaate](#yleinenkehittämisperiaate) | 0..* | Suunnitelman yleinen kehittämisperiaate.
+suunnitelmanKohde | [Suunnitelmakohde](#suunnitelmakohde) | 0..* | Suunnitelman paikkatietokohde, johon voi sisältyä toimintoja ja suunniteltuja toimenpiteitä.
+laatija          | [Toimija](#toimija) | 0..*            | Suunnitelman laatija.
 
 Peritty attribuutti ```elinkaaritila``` on rajoitettu tyyppiin [KaupunkiseutusuunnitelmanElinkaaritila](#kaupunkiseutusuunnitelmanelinkaaritila).
 
@@ -281,9 +277,18 @@ suunnitelma      | [Kaupunkiseutusuunnitelma](#kaupunkiseutusuunnitelma) | 1 | K
 
 ### Suunnitelmakohde
 
-Erikoistaa luokkaa [RakennetunYmpäristönKohde](#rakennetunympäristönkohde), stereotyyppi: FeatureType (kohdetyyppi). Luokka on abstrakti.
+Erikoistaa luokkaa [RakennetunYmpäristönKohde](#rakennetunympäristönkohde), stereotyyppi: FeatureType (kohdetyyppi).
 
 Kuvaa käsitteen [Suunnitelman kohde](../../kasitemalli/#suunnitelman-kohde).
+
+**Ominaisuudet**
+
+Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
+-----------------|---------------------|-----------------|------------------------------------
+toiminto         | [KohteenToiminto](#kohteentoiminto) | 1..*        | Kohteeseen liitetty toiminto.
+elinkaaritila    | [KohteenElinkaaritila](#kohteenelinkaaritila) | 0..1 | Kohteen olemassaolotieto suunnitelman laadinnan aikana.
+kehittämisenOhjelmointi | [SuunniteltuToimenpide](#suunniteltutoimenpide) | 0..* | Kohteeseen liittyä konkreettinen suunniteltu toimenpide. 
+
 
 **Assosiaatiot**
 
@@ -293,38 +298,16 @@ suunnitelma      | [Kaupunkiseutusuunnitelma](#kaupunkiseutusuunnitelma) | 1 | K
 
 Perityn attribuutin ```geometria``` kardinaliteetti on rajoitettu yhteen (attribuutti on pakollinen).
 
-### Toimintokohde
+### Kehittämisperiaate
 
-Erikoistaa luokkaa [Suunnitelmakohde](#suunnitelmakohde), stereotyyppi: FeatureType (kohdetyyppi).
+Erikoistaa luokkaa [VersioituObjekti](#versioituobjekti), stereotyyppi: FeatureType (kohdetyyppi). Luokka on abstrakti.
 
-Konkreettinen suunnitelmakohde, johon liittyy kehitettäviä, uusia ja väistyviä toimintoja.
-
-**Ominaisuudet**
-
-Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
------------------|---------------------|-----------------|------------------------------------
-toiminto         | [KohteenToiminto](#kohteentoiminto) | 0..*        | Kohteeseen liitetyt toiminnot.
-kohteenLaji      | [KohteenLaji](#kohteenlaji) | 1       | Kohteen luokkka.
-sijainninTulkintatapa | [SijainninTulkintatavanLaji](#sijainnintulkintatavanlaji) | 1 | Kuvaa miten kohteen geometria tulisi tulkita.
-elinkaaritila    | [KohteenElinkaaritila](#kohteenelinkaaritila) | 0..1 | Kohteen olemassaolotieto suunnitelman laadinnan aikana. 
-
-### Kehittämisvyöhyke
-
-Erikoistaa luokkaa [Suunnitelmakohde](#suunnitelmakohde), stereotyyppi: FeatureType (kohdetyyppi).
-
-Suunnitelmakohde, joka kuvaa suunnitelmaan sisältyvää kehitettävää aluetta, vyöhykettä tai linjaa.
-
-### Kehittämistoimenpide
-
-Erikoistaa luokkaa [Tietoyksikkö](#tietoyksikkö), stereotyyppi: FeatureType (kohdetyyppi).
-
-Kuvaa käsitteen [Kehittämistoimenpide](../../kasitemalli/#kehittämisvyöhyke).
+Kuvaa käsitteen [Kehittämisperiaate](../../kasitemalli/#kehittämisperiaate).
 
 **Ominaisuudet**
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-toteutusaikataulu | [Aikataulu](#aikataulu) | 0..1       | Toimenpiteen toteuttamisen aikataulu.
 kuvaus           | [LanguageString](#languagestring) | 0..* | Toimenpiteen sanallinen kuvaus.
 teema            | [KaupunkiseutusuunnittelunTeema](#kaupunkiseutusuunnittelunteema) | 0..* | Teemaluokittelu.
 
@@ -332,10 +315,45 @@ teema            | [KaupunkiseutusuunnittelunTeema](#kaupunkiseutusuunnittelunte
 
 Roolinimi        | Kohde               | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-suunnitelma      | [Kaupunkiseutusuunnitelma](#kaupunkiseutusuunnitelma) | 1 | Kaupunkiseutusuunnnitelma, johon toimenpide kuuluu.
-edistettäväTavoite | [Tavoite](#tavoite) | 0..*          | Suunnitelman tavoite, johon pääsemistä toimenpide edistää.
+liittyväTavoite  | [Tavoite](#tavoite) | 0..*            | Tavoite, johon kehittämisperiaate liittyy.
+hyväksyjä        | [Toimija](#toimija) | 0..*            | Toimija, joka on hyväksynyt periaatteen. 
 
-Peritty assosiaatio ```kohdistus``` on rajoitettu viittaamaan vain [Suunnitelmakohde](#suunnitelmakohde)-luokan tai sen aliluokkien objekteihin.
+### YleinenKehittämisperiaate
+
+Erikoistaa luokkaa [Kehittämisperiaate](#kehittämisperiaate), stereotyyppi: FeatureType (kohdetyyppi).
+
+**Ominaisuudet**
+
+Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
+-----------------|---------------------|-----------------|------------------------------------
+laji             | [YleisenKehittämisperiaatteenLaji](#yleisenkehittämisperiaatteenlaji) | 1 | Kehittämisperiaatteen luokka.
+
+**Assosiaatiot**
+
+Roolinimi        | Kohde               | Kardinaliteetti | Kuvaus
+-----------------|---------------------|-----------------|------------------------------------
+toteuttavaPeriaate  | [ToiminnonKehittämisperiaate](#toiminnonkehittämisperiaate) | 0..* | Toiminnon kehittämisperiaate, joka toteuttaa tätä yleistä periaatetta.
+suunnitelma      | [Kaupunkiseutusuunnitelma](#kaupunkiseutusuunnitelma) | 1 | Suunnitelma, johon tämä kehittämisperiaate kuuluu.
+
+### ToiminnonKehittämisperiaate
+
+Erikoistaa luokkaa [Kehittämisperiaate](#kehittämisperiaate), stereotyyppi: FeatureType (kohdetyyppi).
+
+**Ominaisuudet**
+
+Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
+-----------------|---------------------|-----------------|------------------------------------
+laji             | [ToiminnonKehittämisperiaatteenLaji](#toiminnonkehittämisperiaatteenlaji) | 1 | Kehittämisperiaatteen luokka.
+merkittävyys     | [KehittämisperiaatteenMerkittävyys](#kehittämisperiaatteenmerkittävyys) | 0..1 | Kuvaa kehittämisperiaatteen merkittävyyttä suhteessa muihin kehittämisperiaatteisiin.
+toteutusaikataulu | [Aikataulu](#aikataulu) | 0..1       | Kehittämisperiaatteen toteutuksen tavoiteaikataulu.
+
+**Assosiaatiot**
+
+Roolinimi        | Kohde               | Kardinaliteetti | Kuvaus
+-----------------|---------------------|-----------------|------------------------------------
+toteutettavaPeriaate  | [YleinenKehittämisperiaate](#yleinenkehittämisperiaate) | 0..* | Yleinen kehittämisperiaate, jota  tämä toiminnon kehittämisperiaate toteuttaa.
+
+
 
 ### Tavoite
 
@@ -360,14 +378,21 @@ edistäväToimenpide | [Kehittämistomenpide](#kehittämistoimenpide) | 0..*    
 lähtötilanMittaus | [Mittaus](#mittaus) | 0..1 | Tavoitteseen liitetyn ominaisuuden arvon lähtöarvion määrittämiseksi tehty mittaus tai arviointi ja mitattu arvo.
 osatavoite       | [Tavoite](#tavoite) | 0..* | Viittaus tämän tavoitteen osatavoitteisiin, joiden saavuttamisesta tämän tavoitteen saavuttaminen riippuu.
 kokonaistavoite  | [Tavoite](#tavoite) | 0..1 | Viittaus tavoitteeseen, jonka tavoittaminen riippuu tämän tavoitteen saavuttamisesta.
+asettaja         | [Toimija](#toimija) | 0..* | Tavoitteen asettaja.
 
-Peritty assosiaatio ```kohdistus``` on rajoitettu viittaamaan vain [Suunnitelmakohde](#suunnitelmakohde)-luokan tai sen aliluokkien objekteihin.
+Perityn assosiaation ```kohdistus``` käyttö on kielletty rajoituksella. Kohdistus [Suunnitelmakohteeseen](#suunnitelmakohde) vain [KohteenToiminnon](#kohteentoiminto) kautta.
 
 ### SeudullinenTietoaineisto
 
 Erikoistaa luokkaa [Lähtötietoaineisto](#lähtötietoaineisto), stereotyyppi: FeatureType (kohdetyyppi).
 
 Kuvaa käsitteen [Seudullinen tietoaineisto](../../kasitemalli/#seudullinen-tietoaineisto).
+
+**Ominaisuudet**
+
+Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
+-----------------|---------------------|-----------------|------------------------------------
+teema            | [KaupunkiseutusuunnittelunTeema](#kaupunkiseutusuunnittelunteema) | 0..* | Teemaluokittelu.
 
 Peritty attribuutti ```laji``` on rajoitettu tyyppiin [SeudullisenTietoaineistonLaji](#seudullisentietoaineistonlaji) tai sen alityyppeihin.
 
@@ -414,6 +439,28 @@ Roolinimi        | Kohde               | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 mittaus          | [Mittaus](#mittaus) | 0..*            | Mittaus, joka on tehty käyttäen tätä mittaria.
 
+### SuunniteltuToimenpide
+
+Stereotyyppi: DataType (tietotyyppi).
+
+Kuvaa käsitteen [Kehittämistoimenpide](../../kasitemalli/#kehittämistoimenpide).
+
+**Ominaisuudet**
+
+Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
+-----------------|---------------------|-----------------|------------------------------------
+laji             | [ToimenpiteenLaji](#toimenpiteenlaji) | 1 | Toimenpiteen luokka
+kuvaus           | [LanguageString](#languagestring) | 0..* | Toimenpiteen kuvausteksti.
+toteutusaikataulu | [Aikataulu](#aikataulu) | 0..1       | Tavoiteaikataulu toimenpiteen toteuttamiselle.
+teema            | [KaupunkiseutusuunnittelunTeema](#kaupunkiseutusuunnittelunteema) | 0..* | Teemaluokittelu.
+
+**Assosiaatiot**
+
+Roolinimi        | Kohde               | Kardinaliteetti | Kuvaus
+-----------------|---------------------|-----------------|------------------------------------
+toimenpiteenTavoite | [Tavoite](#tavoite) | 0..*         | Tavoite, johon toimenpiteella pyritään edistämään.
+hyväksyjä        | [Toimija](#toimija) | 0..*            | Toimija, joka on hyväksynyt toimenpiteen.
+
 ### Aikataulu
 
 Stereotyyppi: DataType (tietotyyppi).
@@ -453,8 +500,10 @@ Kuvaa käsitteen [Kohteen toiminto](../../kasitemalli/#kohteen-toiminto).
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-toimintolaji     | [Toimintolaji](#toimintolaji) | 1     | Toimintoa kuvaava luokka.
+toimintolaji     | [Toimintolaji](#toimintolaji) | 0..1  | Toimintoa kuvaava luokka.
+infrastruktuurilaji | [Infrastruktuurilaji](#infrastruktuurilaji) | 1 | Toiminnon infrastruktuuriluokitus.
 elinkaarimuutoksenTyyppi | [ElinkaarimuutoksenLaji](#elinkaarimuutoksenlaji) | 1 | Toiminnon suunniteltua muutosta ko. kohteessa kuvaava luokka.
+teema            | [KaupunkiseutusuunnittelunTeema](#kaupunkiseutusuunnittelunteema) | 0..* | Teemaluokittelu.
 
 ### Koodistot
 
@@ -496,23 +545,15 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
 
-#### SijainninTulkintatavanLaji
-
-Stereotyyppi: CodeList (koodisto)
-
-Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
-
-{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
-
-#### KohteenLaji
-
-Stereotyyppi: CodeList (koodisto)
-
-Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
-
-{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
-
 #### KaupunkiseutusuunnittelunTeema
+
+Stereotyyppi: CodeList (koodisto)
+
+Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open)
+
+{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+
+#### Toimenpiteenlaji
 
 Stereotyyppi: CodeList (koodisto)
 
@@ -528,11 +569,27 @@ Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.e
 
 {% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
 
-#### ElinkaarimuutoksenLaji
+#### Infrastruktuurilaji
 
 Stereotyyppi: CodeList (koodisto)
 
-Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
+Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open)
+
+{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+
+#### ToiminnonKehittämisperiaatteenLaji
+
+Stereotyyppi: CodeList (koodisto)
+
+Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open)
+
+{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+
+#### YleisenKehittämisperiaatteenLaji
+
+Stereotyyppi: CodeList (koodisto)
+
+Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open)
 
 {% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
 
@@ -541,6 +598,30 @@ Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/exte
 Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
+
+{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+
+#### ElinkaarimuutoksenLaji
+
+Stereotyyppi: CodeList (koodisto)
+
+Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
+
+{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+
+#### KehittämisperiaatteenMerkittävyys
+
+Stereotyyppi: CodeList (koodisto)
+
+Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
+
+{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+
+#### TavoitteenLähteenLaji
+
+Stereotyyppi: CodeList (koodisto)
+
+Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/open)
 
 {% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
 

@@ -6,6 +6,10 @@ id: "muutosloki"
 # Muutosloki
 {:.no_toc}
 
+## 12.9.2022
+
+* Poistettu YleinenKehittämisperiaate.laji ja sen koodisto YleisenKehittämisperiaatteenLaji.
+
 ## 9.9.2022
 
 * Kehittämisperiaate muutettu abstraktiksi ja jaettu kahteen konkreettiseen luokkaan YleinenKehittämisperiaate ja ToiminnonKehittämisperiaate. Kaupunkiseutusuunnitelma liittyy suoraan vain YleiseenKehittämisperiaatteeseen, ja KohteenToiminto vain ToiminnonKehittämisperiaatteeseen.

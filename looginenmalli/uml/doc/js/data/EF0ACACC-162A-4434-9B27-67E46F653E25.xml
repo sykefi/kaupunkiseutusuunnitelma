@@ -29,4 +29,3 @@ tocTab[tocTab.length] = new Array("0.1:28", "", "«FeatureType» ToiminnonKehitt
 tocTab[tocTab.length] = new Array("0.1:29", "", "«CodeList» ToiminnonKehittämisperiaatteenLaji", "EARoot/EA1/EA37.html", "5.png", "E1692", "0", "", "Class0","{C1F837EE-6538-4da7-A573-856EB57A80B2}");
 tocTab[tocTab.length] = new Array("0.1:30", "", "«CodeList» Toimintolaji", "EARoot/EA1/EA38.html", "5.png", "E1615", "0", "", "Class0","{D917B2B5-250A-4351-9D0F-D7CF79EE80FA}");
 tocTab[tocTab.length] = new Array("0.1:31", "", "«DataType» Vaihe", "EARoot/EA1/EA39.html", "5.png", "E1609", "0", "", "Class0","{A9098A7A-9BC8-4f8f-9D22-CE64718588F8}");
-tocTab[tocTab.length] = new Array("0.1:32", "", "«CodeList» YleisenKehittämisperiaatteenLaji", "EARoot/EA1/EA40.html", "5.png", "E1696", "0", "", "Class0","{C36226FA-30F1-429b-820B-675506566236}");

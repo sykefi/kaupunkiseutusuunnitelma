@@ -322,12 +322,6 @@ hyväksyjä        | [Toimija](#toimija) | 0..*            | Toimija, joka on hy
 
 Erikoistaa luokkaa [Kehittämisperiaate](#kehittämisperiaate), stereotyyppi: FeatureType (kohdetyyppi).
 
-**Ominaisuudet**
-
-Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
------------------|---------------------|-----------------|------------------------------------
-laji             | [YleisenKehittämisperiaatteenLaji](#yleisenkehittämisperiaatteenlaji) | 1 | Kehittämisperiaatteen luokka.
-
 **Assosiaatiot**
 
 Roolinimi        | Kohde               | Kardinaliteetti | Kuvaus
@@ -578,14 +572,6 @@ Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.e
 {% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
 
 #### ToiminnonKehittämisperiaatteenLaji
-
-Stereotyyppi: CodeList (koodisto)
-
-Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open)
-
-{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
-
-#### YleisenKehittämisperiaatteenLaji
 
 Stereotyyppi: CodeList (koodisto)
 

@@ -496,7 +496,7 @@ Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 toimintolaji     | [Toimintolaji](#toimintolaji) | 0..1  | Toimintoa kuvaava luokka.
 infrastruktuurilaji | [Infrastruktuurilaji](#infrastruktuurilaji) | 1 | Toiminnon infrastruktuuriluokitus.
-elinkaarimuutoksenTyyppi | [ElinkaarimuutoksenLaji](#elinkaarimuutoksenlaji) | 1 | Toiminnon suunniteltua muutosta ko. kohteessa kuvaava luokka.
+elinkaarimuutoksenTyyppi | [ElinkaarimuutoksenLaji](#elinkaarimuutoksenlaji) | 0..1 | Toiminnon suunniteltua muutosta ko. kohteessa kuvaava luokka.
 teema            | [KaupunkiseutusuunnittelunTeema](#kaupunkiseutusuunnittelunteema) | 0..* | Teemaluokittelu.
 
 ### Koodistot
@@ -607,7 +607,15 @@ Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/exte
 
 Stereotyyppi: CodeList (koodisto)
 
-Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/open)
+Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open)
+
+{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+
+#### SelostuksenOsanLaji
+
+Stereotyyppi: CodeList (koodisto)
+
+Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open)
 
 {% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
 

@@ -6,6 +6,12 @@ id: "muutosloki"
 # Muutosloki
 {:.no_toc}
 
+## 15.9.2022
+
+* Lisätty koodisto-luokka SelostuksenOsanLaji
+* Muutettu attribuutin KohteenToiminto.elinkaarimuutoksenTyyppi 1 -> 0..1 (ei enää pakollinen)
+* Korjattu dokumentaatiossa TavoitteenLähteenLaji-koodiston laajennettavuustieto Ei laajennettavissa -> Laajennettavissa kaikilla tasoilla.
+
 ## 12.9.2022
 
 * Poistettu YleinenKehittämisperiaate.laji ja sen koodisto YleisenKehittämisperiaatteenLaji.

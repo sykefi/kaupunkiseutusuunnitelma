@@ -6,9 +6,24 @@ id: "muutosloki"
 # Muutosloki
 {:.no_toc}
 
+## 28.9.2022
+
+* Lisätty attribuutti Kehittämisperiaate.nimi.
+* Lisätty uusi koodisto-luokka MitoitussuureenLaji.
+* Poistettu luokka SuunniteltuToimenpide.
+* Muutettu KohteenToiminto stereotyyppi DataType -> FeatureType, periytyy nyt VersioituKohde-luokasta.
+* Lisätty attribuutti KohteenToiminto.nimi.
+* Lisätty attribuutti KohteenToiminto.kuvaus.
+* Poistettu attribuutti SuunnitelmanKohde.toiminto, korvattu kompositioassosiaatiolla luokkaan KohteenToiminto. Vähintään yksi KohteenToiminto on pakollinen kullekin SuunnitelmanKohteelle.
+* Muutettu yksisuuntainen assosiaatio KohteenToiminto.kehittämisperiaate:ToiminnonKehittämisperiaate kaksisuuntaiseksi: Yksi ToiminnonKehittämisperiaate voi liittyä moneen KohteenToimintoon (ja sitä kautta moneen SuunnitelmanKohteeseen).
+* Muutettu yksisuuntainen assosiaatio KohteenToiminto.toiminnonTavoite kaksisuuntaiseksi (liittyväToiminto-liittyväTavoite).
+* Poistettu virheellinen kohdistus-assosiaatioon liittynyt rajoitus Kehittämisperiaate-luokasta (ei periytynyt enää Tietoyksikkö-luokasta).
+* Lisätty attribuutti Mittari.nimi.
+
+
 ## 15.9.2022
 
-* Lisätty koodisto-luokka SelostuksenOsanLaji
+* Lisätty koodisto-luokka SelostuksenOsanLaji.
 * Muutettu attribuutin KohteenToiminto.elinkaarimuutoksenTyyppi 1 -> 0..1 (ei enää pakollinen)
 * Korjattu dokumentaatiossa TavoitteenLähteenLaji-koodiston laajennettavuustieto Ei laajennettavissa -> Laajennettavissa kaikilla tasoilla.
 

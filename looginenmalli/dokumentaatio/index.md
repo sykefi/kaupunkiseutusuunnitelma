@@ -285,9 +285,7 @@ Kuvaa käsitteen [Suunnitelman kohde](../../kasitemalli/#suunnitelman-kohde).
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-toiminto         | [KohteenToiminto](#kohteentoiminto) | 1..*        | Kohteeseen liitetty toiminto.
 elinkaaritila    | [KohteenElinkaaritila](#kohteenelinkaaritila) | 0..1 | Kohteen olemassaolotieto suunnitelman laadinnan aikana.
-kehittämisenOhjelmointi | [SuunniteltuToimenpide](#suunniteltutoimenpide) | 0..* | Kohteeseen liittyä konkreettinen suunniteltu toimenpide. 
 
 
 **Assosiaatiot**
@@ -295,8 +293,34 @@ kehittämisenOhjelmointi | [SuunniteltuToimenpide](#suunniteltutoimenpide) | 0..
 Roolinimi        | Kohde               | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 suunnitelma      | [Kaupunkiseutusuunnitelma](#kaupunkiseutusuunnitelma) | 1 | Kaupunkiseutusuunnnitelma, johon kohde kuuluu.
+toiminto         | [KohteenToiminto](#kohteentoiminto) | 1..*        | Kohteeseen liitetty toiminto.
 
-Perityn attribuutin ```geometria``` kardinaliteetti on rajoitettu yhteen (attribuutti on pakollinen).
+Perityn attribuutin ```geometria``` kardinaliteetti on rajoitettu yhteen (attribuutti on pakollinen). Perityn attribuutin ```pystysuuntainenRajaus``` käyttö on kielletty.
+
+### KohteenToiminto
+
+Erikoistaa luokkaa [VersioituObjekti](#versioituobjekti), stereotyyppi: FeatureType (kohdetyyppi).
+
+Kuvaa käsitteen [Kohteen toiminto](../../kasitemalli/#kohteen-toiminto).
+
+**Ominaisuudet**
+
+Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
+-----------------|---------------------|-----------------|------------------------------------
+nimi             | [LanguageString](#languagestring) | 0..* | Toiminnon nimi.
+kuvaus           | [LanguageString](#languagestring) | 0..* | Toiminnon kuvausteksti.
+toimintolaji     | [Toimintolaji](#toimintolaji) | 0..1  | Toimintoa kuvaava luokka.
+infrastruktuurilaji | [Infrastruktuurilaji](#infrastruktuurilaji) | 1 | Toiminnon infrastruktuuriluokitus.
+elinkaarimuutoksenTyyppi | [ElinkaarimuutoksenLaji](#elinkaarimuutoksenlaji) | 0..1 | Toiminnon suunniteltua muutosta ko. kohteessa kuvaava luokka.
+teema            | [KaupunkiseutusuunnittelunTeema](#kaupunkiseutusuunnittelunteema) | 0..* | Teemaluokittelu.
+
+**Assosiaatiot**
+
+Roolinimi        | Kohde               | Kardinaliteetti | Kuvaus
+-----------------|---------------------|-----------------|------------------------------------
+kohde            | [SuunnitelmanKohde](#suunnitelmakohde) | 1 | Kohde, jonka toiminto on kyseessä.
+kehittämisperiaate | [ToiminnonKehittämisperiaate](#toiminnonkehittämisperiaate) | 0..* | Toimintoon liittyvä kehittämisperiaate.
+liittyväTavoite  | [Tavoite](#tavoite) | 0..* | Toimintoon liittyvä tavoite.
 
 ### Kehittämisperiaate
 
@@ -308,7 +332,8 @@ Kuvaa käsitteen [Kehittämisperiaate](../../kasitemalli/#kehittämisperiaate).
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-kuvaus           | [LanguageString](#languagestring) | 0..* | Toimenpiteen sanallinen kuvaus.
+nimi             | [LanguageString](#languagestring) | 0..* | Periaatteen nimi.
+kuvaus           | [LanguageString](#languagestring) | 0..* | Periaatteen sanallinen kuvaus.
 teema            | [KaupunkiseutusuunnittelunTeema](#kaupunkiseutusuunnittelunteema) | 0..* | Teemaluokittelu.
 
 **Assosiaatiot**
@@ -346,7 +371,7 @@ toteutusaikataulu | [Aikataulu](#aikataulu) | 0..1       | Kehittämisperiaattee
 Roolinimi        | Kohde               | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 toteutettavaPeriaate  | [YleinenKehittämisperiaate](#yleinenkehittämisperiaate) | 0..* | Yleinen kehittämisperiaate, jota  tämä toiminnon kehittämisperiaate toteuttaa.
-
+toiminto         | [KohteenToiminto](#kohteentoiminto) | 1..* | Toiminto, johon kehittämisperiaate kohdistetaan.
 
 
 ### Tavoite
@@ -367,12 +392,14 @@ teema            | [KaupunkiseutusuunnittelunTeema](#kaupunkiseutusuunnittelunte
 
 Roolinimi        | Kohde               | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-suunnitelma      | [Kaupunkiseutusuunnitelma](#kaupunkiseutusuunnitelma) | 1 | Kaupunkiseutusuunnnitelma, johon tavoite kuuluu.
-edistäväToimenpide | [Kehittämistomenpide](#kehittämistoimenpide) | 0..*          | Suunnitelman toimenpide, joka edistää tavoitteen saavuttamista.
+suunnitelma      | [Kaupunkiseutusuunnitelma](#kaupunkiseutusuunnitelma) | 0..1 | Kaupunkiseutusuunnnitelma, jonka tavoite kuuluu koko suunnitelman tavoitteena. Tavoite voi liittyä suunnitelmaan myös vain KohteenToimintojen kautta.
+liittyväPeriaate | [Kehittämisperiaate](#kehittämisperiaate) | 0..*          | Kehittämisperiaate, joka liittyy tavoitteeseen.
 lähtötilanMittaus | [Mittaus](#mittaus) | 0..1 | Tavoitteseen liitetyn ominaisuuden arvon lähtöarvion määrittämiseksi tehty mittaus tai arviointi ja mitattu arvo.
 osatavoite       | [Tavoite](#tavoite) | 0..* | Viittaus tämän tavoitteen osatavoitteisiin, joiden saavuttamisesta tämän tavoitteen saavuttaminen riippuu.
 kokonaistavoite  | [Tavoite](#tavoite) | 0..1 | Viittaus tavoitteeseen, jonka tavoittaminen riippuu tämän tavoitteen saavuttamisesta.
 asettaja         | [Toimija](#toimija) | 0..* | Tavoitteen asettaja.
+perustelevaAineisto | [SeudullinenTietoaineisto](#seudullinentietoaineisto) | 0..* | Tavoitteen asettamiseen liittyä, perusteleva tietoaineisto.
+liittyväToiminto | [KohteenToiminto](#kohteentoiminto) | 0..* | KohteenToiminto, johon tavoite on kohdistettu.
 
 Perityn assosiaation ```kohdistus``` käyttö on kielletty rajoituksella. Kohdistus [Suunnitelmakohteeseen](#suunnitelmakohde) vain [KohteenToiminnon](#kohteentoiminto) kautta.
 
@@ -423,6 +450,7 @@ Kuvaa käsitteen [Mittari](../../kasitemalli/#mittari).
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
+nimi             | [LanguageString](#languagestring) | 0..* | Mittarin nimi.
 kuvaus           | [LanguageString](#languagestring) | 0..* | Mittarin sanallinen kuvaus.
 ulkoinenTunnus   | [Tunnusarvo](#tunnusarvo) | 0..* | Mittarin tunnus tunnettujen mittarien kokoelmassa.
 tuotettavaSuure  | [Suure](#suure)     | Suure, jonka arvoja mittari tuottaa. 
@@ -432,28 +460,6 @@ tuotettavaSuure  | [Suure](#suure)     | Suure, jonka arvoja mittari tuottaa.
 Roolinimi        | Kohde               | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 mittaus          | [Mittaus](#mittaus) | 0..*            | Mittaus, joka on tehty käyttäen tätä mittaria.
-
-### SuunniteltuToimenpide
-
-Stereotyyppi: DataType (tietotyyppi).
-
-Kuvaa käsitteen [Kehittämistoimenpide](../../kasitemalli/#kehittämistoimenpide).
-
-**Ominaisuudet**
-
-Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
------------------|---------------------|-----------------|------------------------------------
-laji             | [ToimenpiteenLaji](#toimenpiteenlaji) | 1 | Toimenpiteen luokka
-kuvaus           | [LanguageString](#languagestring) | 0..* | Toimenpiteen kuvausteksti.
-toteutusaikataulu | [Aikataulu](#aikataulu) | 0..1       | Tavoiteaikataulu toimenpiteen toteuttamiselle.
-teema            | [KaupunkiseutusuunnittelunTeema](#kaupunkiseutusuunnittelunteema) | 0..* | Teemaluokittelu.
-
-**Assosiaatiot**
-
-Roolinimi        | Kohde               | Kardinaliteetti | Kuvaus
------------------|---------------------|-----------------|------------------------------------
-toimenpiteenTavoite | [Tavoite](#tavoite) | 0..*         | Tavoite, johon toimenpiteella pyritään edistämään.
-hyväksyjä        | [Toimija](#toimija) | 0..*            | Toimija, joka on hyväksynyt toimenpiteen.
 
 ### Aikataulu
 
@@ -484,20 +490,6 @@ kuvaus           | [LanguageString](#languagestring) | 0..* | Vaiheen sanallinen
 tavoitearvo      | [AbstraktiSuureenArvo](#abstraktisuureenarvo) | Suureen arvo, joka on määrä saavuttaa vaiheen aikana.
 
 
-### KohteenToiminto
-
-Stereotyyppi: DataType (tietotyyppi).
-
-Kuvaa käsitteen [Kohteen toiminto](../../kasitemalli/#kohteen-toiminto).
-
-**Ominaisuudet**
-
-Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
------------------|---------------------|-----------------|------------------------------------
-toimintolaji     | [Toimintolaji](#toimintolaji) | 0..1  | Toimintoa kuvaava luokka.
-infrastruktuurilaji | [Infrastruktuurilaji](#infrastruktuurilaji) | 1 | Toiminnon infrastruktuuriluokitus.
-elinkaarimuutoksenTyyppi | [ElinkaarimuutoksenLaji](#elinkaarimuutoksenlaji) | 0..1 | Toiminnon suunniteltua muutosta ko. kohteessa kuvaava luokka.
-teema            | [KaupunkiseutusuunnittelunTeema](#kaupunkiseutusuunnittelunteema) | 0..* | Teemaluokittelu.
 
 ### Koodistot
 
@@ -612,6 +604,14 @@ Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.e
 {% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
 
 #### SelostuksenOsanLaji
+
+Stereotyyppi: CodeList (koodisto)
+
+Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open)
+
+{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+
+#### MitoitussuureenLaji
 
 Stereotyyppi: CodeList (koodisto)
 

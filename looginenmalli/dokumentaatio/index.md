@@ -384,9 +384,11 @@ Kuvaa käsitteen [Tavoite](../../kasitemalli/#tavoite).
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-toteutumisaikataulu | [Aikataulu](#aikataulu) | 0..1       | Tavoitteen toteutumisen tavoiteaikataulu.
 kuvaus           | [LanguageString](#languagestring) | 0..* | Tavoitteen sanallinen kuvaus.
+lähde            | [TavoitteenLähteenLaji](#tavoitteenlähteenlaji) | 0..* | Kertoo minkä tyyppisestä lähteestä tavoite on peräisin.
 teema            | [KaupunkiseutusuunnittelunTeema](#kaupunkiseutusuunnittelunteema) | 0..* | Teemaluokittelu.
+toteutumisaikataulu | [Aikataulu](#aikataulu) | 0..1       | Tavoitteen toteutumisen tavoiteaikataulu.
+
 
 **Assosiaatiot**
 
@@ -452,8 +454,8 @@ Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 nimi             | [LanguageString](#languagestring) | 0..* | Mittarin nimi.
 kuvaus           | [LanguageString](#languagestring) | 0..* | Mittarin sanallinen kuvaus.
-ulkoinenTunnus   | [Tunnusarvo](#tunnusarvo) | 0..* | Mittarin tunnus tunnettujen mittarien kokoelmassa.
-tuotettavaSuure  | [Suure](#suure)     | Suure, jonka arvoja mittari tuottaa. 
+ulkoinenTunnus   | [Tunnusarvo](#tunnusarvo) | 0..*      | Mittarin tunnus tunnettujen mittarien kokoelmassa.
+tuotettavaSuure  | [Suure](#suure)     | 1               | Suure, jonka arvoja mittari tuottaa. 
 
 **Assosiaatiot**
 
@@ -487,7 +489,7 @@ otsikko          | [LanguageString](#languagestring) | 0..* | Vaiheen nimi.
 aloitusAika      | [TM_Instant](#tm_instant) | 0..1       | Aikavälin alku.
 päättymisAika    | [TM_Instant](#tm_instant) | 0..1       | Aikavälin loppu.
 kuvaus           | [LanguageString](#languagestring) | 0..* | Vaiheen sanallinen kuvaus.
-tavoitearvo      | [AbstraktiSuureenArvo](#abstraktisuureenarvo) | Suureen arvo, joka on määrä saavuttaa vaiheen aikana.
+tavoitearvo      | [AbstraktiSuureenArvo](#abstraktisuureenarvo) | 0..1 | Suureen arvo, joka on määrä saavuttaa vaiheen aikana.
 
 
 

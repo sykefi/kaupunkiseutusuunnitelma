@@ -6,6 +6,10 @@ id: "muutosloki"
 # Muutosloki
 {:.no_toc}
 
+## 12.10.2022
+* Täydennetty dokumentaatiosivun koodistoluokkien linkit Yhteentoimivuusalustan koodistoihin.
+* Poistettu tarpeettomaksi jäänyt koodistoluokka ToimenpiteenLaji.
+
 ## 28.9.2022
 
 * Lisätty attribuutti Kehittämisperiaate.nimi.

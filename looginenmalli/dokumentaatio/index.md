@@ -234,7 +234,7 @@ vuorovaikutussuunnitelma | [Vuorovaikutussuunnitelma](#vuorovaikutussuunnitelma)
 selostus         | [SuunnitelmanSelostus](#suunnitelmanselostus) | 0..1 | Kaupunkiseutusuunnitelman selostusosa.
 suunnitelmanTavoite | [Tavoite](#tavoite) | 0..*         | Suunnitelmaan sisältyvä tavoite.
 kehittämisperiaate | [YleinenKehittämisperiaate](#yleinenkehittämisperiaate) | 0..* | Suunnitelman yleinen kehittämisperiaate.
-suunnitelmanKohde | [Suunnitelmakohde](#suunnitelmakohde) | 0..* | Suunnitelman paikkatietokohde, johon voi sisältyä toimintoja ja suunniteltuja toimenpiteitä.
+suunnitelmanKohde | [Suunnitelmakohde](#suunnitelmakohde) | 0..* | Suunnitelman paikkatietokohde, johon sisältyy yksi tai useampi toiminto.
 laatija          | [Toimija](#toimija) | 0..*            | Suunnitelman laatija.
 
 Peritty attribuutti ```elinkaaritila``` on rajoitettu tyyppiin [KaupunkiseutusuunnitelmanElinkaaritila](#kaupunkiseutusuunnitelmanelinkaaritila).
@@ -467,7 +467,7 @@ mittaus          | [Mittaus](#mittaus) | 0..*            | Mittaus, joka on teht
 
 Stereotyyppi: DataType (tietotyyppi).
 
-Kuvaa käsitteet [Tavoitteen toteutumisaikataulu](../../kasitemalli/#tavoitteen-toteutumisaikataulu) ja [Toimenpiteen toteuttamisaikataulu](../../kasitemalli/#toimenpiteen-toteuttamisaikataulu) yhdessä luokan [Vaihe](#vaihe) kanssa.
+Kuvaa käsitteen [Tavoitteen toteutumisaikataulu](../../kasitemalli/#tavoitteen-toteutumisaikataulu) yhdessä luokan [Vaihe](#vaihe) kanssa.
 
 **Ominaisuudet**
 
@@ -497,41 +497,43 @@ tavoitearvo      | [AbstraktiSuureenArvo](#abstraktisuureenarvo) | 0..1 | Suuree
 
 #### KaupunkiseutusuunnitelmanElinkaaritila
 
-Stereotyyppi: CodeList (koodisto)
+Erikoistaa luokkaa [AbstraktiAsianElinkaaritila](#abstraktiasianelinkaaritila), stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
 
-{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+{% include common/codelistref.html registry="rytj" id="RY_KaupunkiseutusuunnitelmanElinkaaritila" name="Kaupunkiseutusuunnitelman elinkaaren tila" %}
 
 #### KaupunkiseutusuunnitelmanAsiakirjanLaji
 
-Stereotyyppi: CodeList (koodisto)
+Eriskoistaa luokkaa [AbstraktiAsiakirjanLaji](#abstraktiasiakirjanlaji), stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
 
-{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+{% include common/codelistref.html registry="rytj" id="RY_KaupunkiseutusuunnitelmanAsiakirjanLaji" name="Kaupunkiseutusuunnitelman asiakirjan laji" %}
 
 #### SeudullisenTietoaineistonLaji
 
-Stereotyyppi: CodeList (koodisto)
+Erikoistaa luokkaa [AbstraktiLähtötietoaineistonLaji](#abstraktilähtötietoaineistonlaji), stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open)
 
-{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+{% include common/codelistref.html registry="rytj" id="RY_SeudullisenTietoaineistonLaji" name="Seudullisen tietoaineiston laji (kaupunkiseutusuunnitelma)" %}
 
 #### KaupunkiseutusuunnitelmanVuorovaikutustapahtumanLaji
 
-Stereotyyppi: CodeList (koodisto)
+Erikoistaa luokkaa [AbstaktiVuorovaikutustapahtumanLaji](#abstraktivuorovaikutustapahtumanlaji), stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
 
-{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+{% include common/codelistref.html registry="rytj" id="RY_KaupunkiseutusuunnitelmanVuorovaikutustapahtumanLaji" name="Kaupunkiseutusuunnitelman vuorovaikutustapahtuman laji" %}
 
 #### KaupunkiseutusuunnitelmanKäsittelytapahtumanLaji
 
-Stereotyyppi: CodeList (koodisto)
+Erikoistaa luokkaa [AbstaktiKäsitteltapahtumanLaji](#abstraktikäsittelytapahtumanlaji), stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
+
+{% include common/codelistref.html registry="rytj" id="RY_KaupunkiseutusuunnitelmanKasittelytapahtumanLaji" name="Kaupunkiseutusuunnitelman käsittelytapahtuman laji" %}
 
 #### KaupunkiseutusuunnittelunTeema
 
@@ -539,15 +541,8 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open)
 
-{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+{% include common/codelistref.html registry="rytj" id="RY_KaupunkiseutusuunnittelunTeema" name="Kaupunkiseutusuunnittelun teema" %}
 
-#### Toimenpiteenlaji
-
-Stereotyyppi: CodeList (koodisto)
-
-Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open)
-
-{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
 
 #### Toimintolaji
 
@@ -555,7 +550,7 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open)
 
-{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+{% include common/codelistref.html registry="rytj" id="RY_Toimintolaji" name="Toimintolaji (kaupunkiseutusuunnitelma)" %}
 
 #### Infrastruktuurilaji
 
@@ -563,7 +558,7 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open)
 
-{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+{% include common/codelistref.html registry="rytj" id="RY_Infrastruktuurilaji" name="Infrastruktuurilaji (kaupunkiseutusuunnitelma)" %}
 
 #### ToiminnonKehittämisperiaatteenLaji
 
@@ -571,7 +566,7 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open)
 
-{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+{% include common/codelistref.html registry="rytj" id="RY_ToiminnonKehittamisperiaatteenLaji" name="Toiminnon kehittämisperiaatteen laji (kaupunkiseutusuunnitelma)" %}
 
 #### KohteenElinkaaritila
 
@@ -579,7 +574,7 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
 
-{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+{% include common/codelistref.html registry="rytj" id="RY_KohteenElinkaaritila" name="Kohteen elinkaaritila (kaupunkiseutusuunnitelma)" %}
 
 #### ElinkaarimuutoksenLaji
 
@@ -587,7 +582,7 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
 
-{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+{% include common/codelistref.html registry="rytj" id="RY_ElinkaarimuutoksenLaji" name="Elinkaarimuutoksen laji (kaupunkiseutusuunnitelma)" %}
 
 #### KehittämisperiaatteenMerkittävyys
 
@@ -595,7 +590,7 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
 
-{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+{% include common/codelistref.html registry="rytj" id="RY_KehittamisperiaatteenMerkittavyys" name="Kehittämisperiaatteen merkittävyys (kaupunkiseutusuunnitelma)" %}
 
 #### TavoitteenLähteenLaji
 
@@ -603,23 +598,27 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open)
 
-{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+{% include common/codelistref.html registry="rytj" id="RY_TavoitteenLahteenLaji" name="Tavoitteen lähteen laji (kaupunkiseutusuunnitelma)" %}
 
 #### SelostuksenOsanLaji
 
+Koodisto, joka kuvaa myöhemmin rakenteistettavan kaupunkiseutusuunnitelman selostuksen osien lajit.
+
 Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open)
 
-{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+{% include common/codelistref.html registry="rytj" id="RY_SelostuksenOsanLaji" name="Selostuksen osan laji (kaupunkiseutusuunnitelma)" %}
 
 #### MitoitussuureenLaji
 
+Koodisto kaupupunkiseutusuunnitelmien mitoitussuureiden vakiointia ja kuvaamista varten.
+
 Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open)
 
-{% include common/codelistref.html registry="rakrek" id="todo" name="TODO" %}
+{% include common/codelistref.html registry="rytj" id="RY_MitoitussuureenLaji" name="Mitoitussuureen laji (kaupunkiseutusuunnitelma)" %}
 
 [ISO-8601-1]: https://www.iso.org/standard/70907.html "ISO 8601-1:2019 Date and time — Representations for information interchange — Part 1: Basic rules"
 [ISO-639-2]: https://www.iso.org/standard/4767.html "ISO 639-2:1998 Codes for the representation of names of languages — Part 2: Alpha-3 code"

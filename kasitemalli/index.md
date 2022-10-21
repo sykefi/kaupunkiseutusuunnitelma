@@ -65,15 +65,16 @@ status: "Ehdotus"
     def="sijainnillinen kohde, johon suunnitelman tavoitteita ja toimenpiteitä ja toimintoja voidaan kohdistaa."
 %}
 
-### Kehittämistoimenpide
+### Kehittämisperiaate
 
 {% include common/definitionref.html 
     dict="kss"
     dictname="Kaupunkiseutusuunnitelma"
-    id="concept-15" 
-    name="kehittämistoimenpide" 
-    def="yhteen tai useampaan suunnitelman kohteeseen liittyvä tehtävä suunnitelman tavoitteiden saavuttamiseksi."
+    id="concept-1001" 
+    name="kehittämisperiaate" 
+    def="kehittämistä tai suunnittelua ohjaava näkemys tai linjaus suunnitelman tavoitteiden saavuttamiseksi."
 %}
+
 
 ### Tavoite
 
@@ -146,15 +147,6 @@ status: "Ehdotus"
     def="hyvin määritely instrumentti tai menetelmä mitata tai arvioida jonkin suureen arvo. "
 %}
 
-### Toimenpiteen toteutusaikataulu
-
-{% include common/definitionref.html 
-    dict="kss"
-    dictname="Kaupunkiseutusuunnitelma"
-    id="concept-17" 
-    name="toimenpiteen toteutusaikataulu" 
-    def="sarja aikamääreitä, joihin mennessä toimenpide tai sen osa on määrä saada tehtyä"
-%}
 
 ### Tavoitteen toteutumisaikataulu
 
@@ -175,6 +167,36 @@ status: "Ehdotus"
     id="concept-7" 
     name="kohteen toiminto" 
     def="suunnitelman kohteeseen liittyvä inhimillinen aktiviteetti ja sitä tukeva ympäristö- tai infrastruktuuriratkaisu"
+%}
+
+### Toiminnon infrastruktuurilaji
+
+{% include common/definitionref.html 
+    dict="kss"
+    dictname="Kaupunkiseutusuunnitelma"
+    id="concept-1004" 
+    name="toiminnon infrastruktuurilaji" 
+    def="kaupunkiseutusuunnitelman kohteeseen liittyvän toiminnon abstrakti tai konkreettinen infrastruktuuritaso"
+%}
+
+### Toiminnon kehittämisperiaate
+
+{% include common/definitionref.html 
+    dict="kss"
+    dictname="Kaupunkiseutusuunnitelma"
+    id="concept-1002" 
+    name="toiminnon kehittämisperiaate" 
+    def="kaupunkiseutusuunnitelman kohteessa olevan toiminnon kehittämistä tai suunnittelua ohjaava näkemys tai linjaus"
+%}
+
+### Toiminnon toimintolaji
+
+{% include common/definitionref.html 
+    dict="kss"
+    dictname="Kaupunkiseutusuunnitelma"
+    id="concept-1003" 
+    name="toiminnon toimintolaji" 
+    def="kaupunkiseutusuunnitelman kohteeseen liittyvän toiminnon abstraktin tai konkreettisen inhimillisen aktiviteettiin laji"
 %}
 
 ### Suunnitelman elinkaaren vaihe
@@ -279,9 +301,6 @@ status: "Ehdotus"
 %}
 
 
-
-
-
 ### Kaupunkiseudun muutosajuri
 
 {% include common/definitionref.html 
@@ -342,6 +361,26 @@ status: "Ehdotus"
     id="concept-25" 
     name="tavoitteen toteuma" 
     def="mittaus ja sen tulos tai muu tietyllä ajanhetkellä tehty arvio tietyn kaupunkiseutusuunnitelman tavoitteen saavuttamisesta."
+%}
+
+### Kehittämistoimenpide
+
+{% include common/definitionref.html 
+    dict="kss"
+    dictname="Kaupunkiseutusuunnitelma"
+    id="concept-15" 
+    name="kehittämistoimenpide" 
+    def="yhteen tai useampaan suunnitelman kohteeseen liittyvä tehtävä suunnitelman tavoitteiden saavuttamiseksi."
+%}
+
+### Toimenpiteen toteutusaikataulu
+
+{% include common/definitionref.html 
+    dict="kss"
+    dictname="Kaupunkiseutusuunnitelma"
+    id="concept-17" 
+    name="toimenpiteen toteutusaikataulu" 
+    def="sarja aikamääreitä, joihin mennessä toimenpide tai sen osa on määrä saada tehtyä"
 %}
 
 #### Toimenpiteen tila

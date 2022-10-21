@@ -6,7 +6,13 @@ id: "muutosloki"
 # Muutosloki
 {:.no_toc}
 
+
+## 21.10.2002
+
+* Lisätty käsitemalli-sivulle käsitteet kehittämisperiaate, toiminnon infrastruktuurilaji, toiminnon kehittämisperiaate, toiminnon toimintolaji. Siirretty kehittämistoimenpide ja toimenpiteen toteutusaikataulu seurannan käsitteiden alle. Ydinkäsitteiden kaavio päiviteytty vastaamaan kehitysprojektin lopullista, UML-malln kanssa yhdenmukaista käsitemallia.   
+
 ## 12.10.2022
+
 * Täydennetty dokumentaatiosivun koodistoluokkien linkit Yhteentoimivuusalustan koodistoihin.
 * Poistettu tarpeettomaksi jäänyt koodistoluokka ToimenpiteenLaji.
 

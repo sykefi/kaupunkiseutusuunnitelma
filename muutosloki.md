@@ -9,7 +9,7 @@ id: "muutosloki"
 
 ## 21.10.2002
 
-* Lisätty käsitemalli-sivulle käsitteet kehittämisperiaate, toiminnon infrastruktuurilaji, toiminnon kehittämisperiaate, toiminnon toimintolaji. Siirretty kehittämistoimenpide ja toimenpiteen toteutusaikataulu seurannan käsitteiden alle. Ydinkäsitteiden kaavio päiviteytty vastaamaan kehitysprojektin lopullista, UML-malln kanssa yhdenmukaista käsitemallia.   
+* Lisätty käsitemalli-sivulle käsitteet kehittämisperiaate, toiminnon infrastruktuurilaji, toiminnon kehittämisperiaate, toiminnon toimintolaji. Siirretty kehittämistoimenpide ja toimenpiteen toteutusaikataulu seurannan käsitteiden alle. Ydinkäsitteiden kaavio päiviteytty vastaamaan kehitysprojektin lopullista, UML-malln kanssa yhdenmukaista käsitemallia. Looginen malli / dokumentaatio -sivu muutettu tilaan Ehdotus.   
 
 ## 12.10.2022
 

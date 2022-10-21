@@ -363,7 +363,7 @@ status: "Ehdotus"
     def="mittaus ja sen tulos tai muu tietyllä ajanhetkellä tehty arvio tietyn kaupunkiseutusuunnitelman tavoitteen saavuttamisesta."
 %}
 
-### Kehittämistoimenpide
+#### Kehittämistoimenpide
 
 {% include common/definitionref.html 
     dict="kss"
@@ -373,7 +373,7 @@ status: "Ehdotus"
     def="yhteen tai useampaan suunnitelman kohteeseen liittyvä tehtävä suunnitelman tavoitteiden saavuttamiseksi."
 %}
 
-### Toimenpiteen toteutusaikataulu
+#### Toimenpiteen toteutusaikataulu
 
 {% include common/definitionref.html 
     dict="kss"

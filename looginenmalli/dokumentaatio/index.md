@@ -385,7 +385,7 @@ Kuvaa käsitteen [Tavoite](../../kasitemalli/#tavoite).
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 kuvaus           | [LanguageString](#languagestring) | 0..* | Tavoitteen sanallinen kuvaus.
-lähde            | [TavoitteenLähteenLaji](#tavoitteenlähteenlaji) | 0..* | Kertoo minkä tyyppisestä lähteestä tavoite on peräisin.
+lähde            | [TavoitteenLähde](#tavoitteenlähde) | 0..* | Mistä tavoite on peräisin.
 teema            | [KaupunkiseutusuunnittelunTeema](#kaupunkiseutusuunnittelunteema) | 0..* | Teemaluokittelu.
 toteutumisaikataulu | [Aikataulu](#aikataulu) | 0..1       | Tavoitteen toteutumisen tavoiteaikataulu.
 
@@ -491,6 +491,18 @@ päättymisAika    | [TM_Instant](#tm_instant) | 0..1       | Aikavälin loppu.
 kuvaus           | [LanguageString](#languagestring) | 0..* | Vaiheen sanallinen kuvaus.
 tavoitearvo      | [AbstraktiSuureenArvo](#abstraktisuureenarvo) | 0..1 | Suureen arvo, joka on määrä saavuttaa vaiheen aikana.
 
+### TavoitteenLähde
+
+Stereotyyppi: DataType (tietotyyppi).
+
+Tietolähde, josta tavoite on poimittu suunnitelmaan tai josta se on johdettu.
+
+**Ominaisuudet**
+
+Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
+-----------------|---------------------|-----------------|------------------------------------
+laji             | [TavoitteenLähteenLaji](#tavoitteenlähteenlaji) | 1 | Kertoo minkä tyyppinen lähde on kyseessä.
+lähdeasiakirja   | [Asiakirja](#asiakirja) | 0..*        | Asiakirja, joka toimii tavoitteen lähteenä.
 
 
 ### Koodistot

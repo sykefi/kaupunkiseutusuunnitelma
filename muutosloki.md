@@ -6,8 +6,12 @@ id: "muutosloki"
 # Muutosloki
 {:.no_toc}
 
+## 27.10.2022
 
-## 21.10.2002
+* Lisätty uusi tietotyyppiluokka TavoitteenLähde.
+* Lisätty koodistoluokkiin viittaukset Y-alustan sanastoihin (vocabulary tag).
+
+## 21.10.2022
 
 * Lisätty käsitemalli-sivulle käsitteet kehittämisperiaate, toiminnon infrastruktuurilaji, toiminnon kehittämisperiaate, toiminnon toimintolaji. Siirretty kehittämistoimenpide ja toimenpiteen toteutusaikataulu seurannan käsitteiden alle. Ydinkäsitteiden kaavio päiviteytty vastaamaan kehitysprojektin lopullista, UML-malln kanssa yhdenmukaista käsitemallia. Looginen malli / dokumentaatio -sivu muutettu tilaan Ehdotus.   
 

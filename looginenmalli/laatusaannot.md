@@ -195,19 +195,20 @@ Aikavälejä kuvaavat attribuutit voidaan antaa joko sekä alku- että loppuajan
 {% include common/clause_end.html %} -->
 
 ### Kaupunkiseutusuunnitelma
+
+{% include common/clause_start.html type="req" id="laatu/vaat-alueidenkayttojarakentamispaatos-paallekkaiset-voimassaoloajat" %}
+Kaupunkiseutusuunnitelman tietovarastossa ei tule olla kahta [AlueidenkäyttöJaRakentamispaatos](dokumentaatio/#alueidenkäyttöjarakentamispaatos)-luokan objektia, joiden 
+* ```voimassaoloAika```-attribuutin arvojen kuvaamat aikavälit ovat sisäkkäisiä tai lomittain.
+{% include common/clause_end.html %}
+
 {% include common/clause_start.html type="req" id="laatu/vaat-alueidenkayttojarakentamisasia-paallekkaiset-aluerajaukset" %}
 Kaupunkiseutusuunnitelman tietovarastossa ei tule olla kahta [AlueidenkäyttöJaRakentamisasia](dokumentaatio/#alueidenkäyttöjarakentamisasia)-luokan objektia, joiden 
 * ```aluerajaus```-attribuuttien kuvaavat geometriat leikaavat toisiaan tai ovat sisäkkäisiä.
 {% include common/clause_end.html %}
 
-Kaupunkiseutusuunnitelman tietovarastossa ei tule olla kahta [AlueidenkäyttöJaRakentamispaatos](dokumentaatio/#alueidenkäyttöjarakentamisasia)-luokan objektia, joiden 
-* ```voimassaoloAika```-attribuutin arvojen kuvaamat aikavälit ovat sisäkkäisiä tai lomittain.
-{% include common/clause_end.html %}
-
 {% include common/clause_start.html type="req" id="laatu/vaat-suunnitelma-aluerajaus-annettava" %}
 [AlueidenkäyttöJaRakentamisasia](dokumentaatio/#alueidenkayttojarakentamisasia)-luokan objektilla, jonka [elinkaaritila](http://uri.suomi.fi/codelist/rytj/RY_KaupunkiseutusuunnitelmanElinkaaritila) on suunnitelmaehdotus tai myöhempi (koodi 03, 04, 05, 06, 07, 08 tai 09) tulee olla ei-tyhjä ```aluerajaus```-attribuutin arvo. 
 {% include common/clause_end.html %}
-
 
 {% include common/clause_start.html type="req" id="laatu/vaat-alueidenkayttojarakentamisasia-virelletuloaika-annettava" %}
 [AlueidenkäyttöJaRakentamisasia](dokumentaatio/#alueidenkayttojarakentamisasia)-luokan objektilla, jonka [elinkaaritila](http://uri.suomi.fi/codelist/rytj/RY_KaupunkiseutusuunnitelmanElinkaaritila) on virelletullut tai myöhempi (koodi 02, 03, 04, 05, 06, 07, 08, 09, 10, 11 tai 12), tulee olla ei-tyhjä ```virelletuloAika```-attribuutin arvo. 

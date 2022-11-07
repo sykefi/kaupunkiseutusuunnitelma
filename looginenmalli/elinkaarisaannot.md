@@ -264,7 +264,7 @@ Yksittäisen tietokohteen yksityiskohtainen muutoshistoria kaupunkiseutusuunnite
 
 Attribuutin ```viimeisinMuutos``` arvo kuvaa ajanhetkeä, jolloin ko. tietokohteeseen on tehty sisällöllinen muutos tiedontuottajan tietojärjestelmässä. Tiedontuottajan järjestelmän osalta ei vaadita tiukkaa versiontipolitiikkaa, eli ```paikallinenTunnus```-attribuutin päivittämistä jokaisen tietokohteen muutoksen johdosta. ```viimeisinMuutos```-attribuutin päivittämien riittää kuvaamaan tiedon todellisen muuttumisajankohdan.
 
-<!-->
+<!--
 ### Suunnitelman käsittely- ja vuorovaikutustapahtumien elinkaari
 Suunnitteluprosessin historian yhdessä kuvaavat [AbstraktiTapahtuma](dokumentaatio/#abstraktitapahtuma)-luokasta perityt [Kasittelytapahtuma](dokumentaatio/#kasittelytapahtuma)- ja [Vuorovaikutustapahtuma](dokumentaatio/#vuorovaikutustapahtuma)-luokan tietokohteet linkitetään yksisuuntaisesti [AbstraktiMaankayttoasia](dokumentaatio/#abstraktimaankayttoasia)-luokkaan (Kaava-luokan yläluokka) päin. Tapahtumatietokohteiden uusina versiona tallennettavat muutokset eivät koskaan johda uuden version luomiseen Kaava-luokan tietokohteesta, sen kaavakohteista, kaavamääräyksistä tai -suosituksista. Syy tähän on se, että käsittely- ja vuorovaikutustapahtumien on tärkeää kohdistua nimenomaan tiettyyn, pysyvään versioon kaavasta.
 
@@ -273,7 +273,7 @@ Kulloinkin nähtävillä olevien kaavojen poimiminen on eräs kaavatietovaraston
 {% include common/clause_start.html type="req" id="elinkaari/vaat-tapahtumien-poistaminen" %}
 Kerran tallennettuja [AbstraktiTapahtuma](dokumentaatio/#abstraktitapahtuma)-luokan tietokohteita ei voi poistaa kaavatietovarastosta. Mikäli suunniteltu vuorovaikutustapahtuma ei syystä tai toisesta toteudu tai käsittelytapahtumaan liittyvä päätös kumotaan, tulee sen attribuutti ```peruttu``` asettaa arvoon ```true```.
 {% include common/clause_end.html %} -->
-<!-->
+<!--
 ### Kaavan ja sen tietokohteiden voimaantulo
 Kaavan ```voimassaoloAika``` -attribuutin alkuaika on ajanhetki, jolloin kaava sen valitusajan umpeuduttua ja mahdollisten valitusten ja oikaisukehotusten käsittelyn jälkeen kuulutetaan voimaantulleeksi.
 
@@ -375,7 +375,7 @@ Kaavojen, joiden elinkaaritila on Kaavoitusaloite,  Vireilletullut, Valmistelu, 
 
 ### Sallitut suunnitelman elinkaaren tilan muutokset
 Suunnitelman elinkaaritila voi <!--sen laadinta-, päätös-, valitus-, voimassaolo- ja kumoutumisvaiheidensa-->esiintyä ja muuttua vain tässä luvussa kuvatuilla tavoilla.
-<!--->
+<!--
 {% include common/clause_start.html type="req" id="elinkaari/vaat-ensimmainen-elinkaaritila" %}
 Kaavan elinkaaritila tallennettaessa kaava ensimmäistä kertaa kaavatietovarastoon voi olla jokin seuraavista riippuen Kaavan ```digitaalinenAlkupera```-attribuutin arvosta:
    * [Tietomallin mukaan laadittu](http://uri.suomi.fi/codelist/rytj/RY_DigitaalinenAlkupera/code/01): tilat Kaavoitusaloite, Vireilletullut, Valmistelu, Kaavaehdotus, Tarkistettu kaavaehdotus tai Hyväksytty kaava.
@@ -393,7 +393,7 @@ Kaavan elinkaaritila tallennettaessa kaava ensimmäistä kertaa kaavatietovarast
 * Tilasta ```Kumoutunut``` ei sallittuja siirtymiä.
 * Tilasta ```Rauennut``` ei sallittuja siirtymiä.
 {% include common/clause_end.html %}
-<!-->
+<!--
 {% include common/question.html content="Onko kaava heti lainvoimainen (ja siis sen voimassaoloaika alkanut), kun se on päätetty määrätä osittain voimaan? Vai seuraako osittain voimaan määräämispäätöksestä vielä valitusaika, jonka jälkeen kaava tulee vielä erikseen kuuluttaa lainvoimaiseksi? Jos erillinen lainvoimaiseksi kuuluttaminen on tarpeen, tulee sallia myös tilamuutos ```Osittain voimassa -> Voimassa```" %}
 
 ### Kaavamääräysten ja -suositusten elinkaaren tila

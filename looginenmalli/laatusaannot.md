@@ -195,11 +195,11 @@ Aikavälejä kuvaavat attribuutit voidaan antaa joko sekä alku- että loppuajan
 {% include common/clause_end.html %} -->
 
 ### Kaupunkiseutusuunnitelma
-
+<!--
 {% include common/clause_start.html type="req" id="laatu/vaat-alueidenkayttojarakentamispaatos-paallekkaiset-voimassaoloajat" %}
 Kaupunkiseutusuunnitelman tietovarastossa ei tule olla kahta [AlueidenkäyttöJaRakentamispaatos](dokumentaatio/#alueidenkäyttöjarakentamispaatos)-luokan objektia, joiden 
 * ```voimassaoloAika```-attribuutin arvojen kuvaamat aikavälit ovat sisäkkäisiä tai lomittain.
-{% include common/clause_end.html %}
+{% include common/clause_end.html %} -->
 
 {% include common/clause_start.html type="req" id="laatu/vaat-alueidenkayttojarakentamisasia-paallekkaiset-aluerajaukset" %}
 Kaupunkiseutusuunnitelman tietovarastossa ei tule olla kahta [AlueidenkäyttöJaRakentamisasia](dokumentaatio/#alueidenkäyttöjarakentamisasia)-luokan objektia, joiden 

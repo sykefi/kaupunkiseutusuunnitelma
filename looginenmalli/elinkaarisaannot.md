@@ -5,6 +5,9 @@ id: "elinkaarisaannot"
 status: "Keskeneräinen"
 ---
 
+# Elinkaarisäännöt
+{:.no_toc}
+
 1. 
 {:toc}
 
@@ -374,7 +377,7 @@ Kaupunkiseutusuunnitelman ja sen sisältämien suunnitelmakohteiden elinkaareen 
 Kaavojen, joiden elinkaaritila on Kaavoitusaloite,  Vireilletullut, Valmistelu, Kaavaehdotus, Tarkistettu kaavaehdotus, Hyväksytty kaava, Oikaisukehotuksen alainen tai Valituksen alainen, laadinta- ja päätösprosessi on kesken, eli niiden kaavamääräykset eivät (vielä) ole lainvoimaisia. Kaavat, jotka ovat elinkaaritilassa Osittain voimassa tai Voimassa sisältävät nykyajanhetkellä rajaamallaan alueella voimassa olevia kaavamääräyksiä. Koodit Kumottu, Kumoutunut, Rauennut ja Hylätty kuvaavat kaavan tiloja, joissa olevan kaavan elinkaari on päättynyt.-->
 
 ### Sallitut suunnitelman elinkaaren tilan muutokset
-Suunnitelman elinkaaritila voi <!--sen laadinta-, päätös-, valitus-, voimassaolo- ja kumoutumisvaiheidensa-->esiintyä ja muuttua vain tässä luvussa kuvatuilla tavoilla.
+Suunnitelman elinkaaritila voi esiintyä ja muuttua vain tässä luvussa kuvatuilla tavoilla.
 <!--
 {% include common/clause_start.html type="req" id="elinkaari/vaat-ensimmainen-elinkaaritila" %}
 Kaavan elinkaaritila tallennettaessa kaava ensimmäistä kertaa kaavatietovarastoon voi olla jokin seuraavista riippuen Kaavan ```digitaalinenAlkupera```-attribuutin arvosta:

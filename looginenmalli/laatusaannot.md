@@ -227,7 +227,7 @@ Kaupunkiseutusuunnitelman tietovarastossa ei tule olla kahta [AlueidenkäyttöJa
 {% include common/clause_start.html type="req" id="laatu/vaat-alueidenkayttojarakentamisasia-voimassaolo-loppu" %}
 [AlueidenkäyttöJaRakentamisasia](dokumentaatio/#alueidenkayttojarakentamisasia)-luokan objektilla, jonka [elinkaaritila](http://uri.suomi.fi/codelist/rytj/RY_KaupunkiseutusuunnitelmanElinkaaritila) on  kumoutunut tai rauennut (koodi 08 tai 09), tulee olla [AlueidenkäyttöJaRakentamispaatos](dokumentaatio/#alueidenkayttojarakentamispaatos)-luokan objektille annettu ei-tyhjä ```voimassaAika```-attribuutin loppuajanhetken arvo.
 {% include common/clause_end.html %}
--->
+
 ### Suunnitelmakohde
 
 {% include common/clause_start.html type="req" id="laatu/vaat-suunnitelmakohde-geometria" %}

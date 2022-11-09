@@ -96,10 +96,9 @@ Viivamaiset geometriat toteuttavat ISO 19107 -standardin määrittelemän ```Cur
 Aluemaiset geometriat toteuttavat ISO 19107 -standardin määrittelemän ```Surface```-rajapinnan.
 {% include common/clause_end.html %}
 
-{% include common/clause_start.html type="req" id="laatu/vaat-geom-3d-kappale-maar" %}
+<!-- {% include common/clause_start.html type="req" id="laatu/vaat-geom-3d-kappale-maar" %}
 3-ulotteiset kappalegeometriat toteuttavat joko ISO 19107 -standardin määrittelemän ```Solid```-rajapinnan.
-{% include common/clause_end.html %}
-
+{% include common/clause_end.html %} -->
 {% include common/clause_start.html type="req" id="laatu/vaat-geom-kokoelmat-maar" %}
 Geometriakokoelmat toteuttavat ISO 19107 -standardin määrittelemän ```Collection```-rajapinnan. Monipiste (multipoint) -geometriat rakentuvat ```Point```-rajapinnan, moniviiva (multicurve) -geometriat ```Curve```-rajapinnan, monialue (multisurface) -geometriat ```Surface```-rajapinnan ja monikappale (multisolid) -geometriat ```Solid```-rajapinnan toteuttavista osista (```element```-attribuutti).
 {% include common/clause_end.html %}
@@ -112,7 +111,7 @@ Rakennetun ympäristön tietojärjestelmä tukee seuraavia koordinaatistoja:
 
 Tiedon luovutuksen koordinaatistot
 * EPSG:4326, WGS84
-  * Käytössä myös IFC-mallissa 
+<!--  * Käytössä myös IFC-mallissa -->
 * EPSG:3857, Google Web Mercator
 * Tiedon luovutusrajapinnan käyttäjä voi pyytää vastauksen haluamassaan tuetussa koordinaatistossa, jolloin tietojärjestelmä muuntaa tarvittaessa varannossa olevan tiedon haluttuun kohdekoordinaatistoon.
 
@@ -231,14 +230,15 @@ Kaupunkiseutusuunnitelman tietovarastossa ei tule olla kahta [AlueidenkäyttöJa
 ### Suunnitelmakohde
 
 {% include common/clause_start.html type="req" id="laatu/vaat-suunnitelmakohde-geometria" %}
-[Suunnitelmakohde](dokumentaatio/#suunnitelmakohde)-luokan objektin ```geometria```-attribuutin arvon tulee olla [piste](#laatu-vaat-geom-piste-maar), [viiva](#laatu-vaat-geom-viiva-maar), [alue](#laatu-vaat-geom-2d-alue-maar), [3-ulotteinen kappale](#laatu-vaat-geom-3d-kappale-maar), [moniviiva, monialue tai monikappale](#laatu-vaat-geom-kokoelmat-maar).
+[Suunnitelmakohde](dokumentaatio/#suunnitelmakohde)-luokan objektin ```geometria```-attribuutin arvon tulee olla [piste](#laatu-vaat-geom-piste-maar), [viiva](#laatu-vaat-geom-viiva-maar), [alue](#laatu-vaat-geom-2d-alue-maar),<!-- [3-ulotteinen kappale](#laatu-vaat-geom-3d-kappale-maar),--> [moniviiva, monialue tai monikappale](#laatu-vaat-geom-kokoelmat-maar).
 {% include common/clause_end.html %}
 
+<!--
 {% include common/clause_start.html type="req" id="laatu/vaat-suunnitelmakohde-3d-konsistenssi" %}
 Mikäli [Suunnitelmakohde](dokumentaatio/#suunnitelmakohde)-luokan objektin ```geometria```-attribuutin arvo on [3-ulotteinen kappale](#laatu-vaat-geom-3d-kappale-maar) tai [monikappale](#laatu-vaat-geom-kokoelmat-maar), ja sille on annettu ```pystysuuntainenRajaus```-attribuutti, tulee ```geometria```-attribuutin arvon sijaita pystysuuntaisen rajauksen määrittämien korkeuksien ala- ja ylärajojen väleissä. 
 {% include common/clause_end.html %}
 
-<!-- {% include common/clause_start.html type="req" id="laatu/vaat-paallekkaiset-kaavakohteet" %}
+ {% include common/clause_start.html type="req" id="laatu/vaat-paallekkaiset-kaavakohteet" %}
 Kaupunkiseutusuunnitelman tietovarastossa ei tule olla kahta [Suunnitelmakohde](dokumentaatio/#suunnitelmakohde)-luokan objektia, joiden
 * ```kaava```-attribuutin arvo viittaavat eri kaavoihin, 
 * ```voimassaoloAika```-attribuutin arvojen kuvaamat aikavälit ovat sisäkkäisiä tai lomittain, ja

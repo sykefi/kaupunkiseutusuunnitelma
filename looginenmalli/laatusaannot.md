@@ -34,11 +34,6 @@ Kaupunkiseutusuunnitelman tietomallin versioitavilla tietokohteilla tulee olla y
 Kaupunkiseutusuunnitelman tietomallin mukaisten aineistojen tulee noudattaa Kaupunkiseutusuunnitelman tietomallin [elinkaarisääntöjen](elinkaarisaannot.html) vaatimuksia, ja niiden on suositeltavaa noudattaa elinkaarisääntöjen suosituksia. Vaatimukset ja suositukset on erotettu selkeästi elinkaarisääntöjen muusta sisällöstä.
 {% include common/clause_end.html %}
 
-<!-- ### Soveltamisohjeiden mukaisuus
-{% include common/clause_start.html type="req" id="laatu/vaat-soveltamisohjeet" %}
-Kaavatietomallin mukaisten aineistojen tulee noudattaa niiden kaavalajikohtaisten soveltamisprofiilien ([Asemakaava](/kaavatiedot/soveltamisprofiili/asemakaava/), [Yleiskaava](/kaavatiedot/soveltamisprofiili/yleiskaava/)) vaatimuksia, ja niiden on suositeltavaa noudattaa soveltamisprofiilien suosituksia. Vaatimukset ja suositukset on erotettu selkeästi soveltamisprofiilien muusta sisällöstä.
-{% include common/clause_end.html %}
--->
 ### Merkkijonojen käyttö
 #### Merkistöt
 {% include common/clause_start.html type="req" id="laatu/vaat-merkisto-utf8" %}
@@ -57,7 +52,7 @@ Kunkin LanguageString-luokan objektin tulee toteuttaa ```language```-attribuutti
 Tekstimuotoiset attribuutit on määritelty siten, että ne sisältävät nolla tai enemmän LanguageString-tyyppisiä arvoja.
 
 {% include common/clause_start.html type="req" id="laatu/vaat-yksi-teksti-per-kieli" %}
-Kunkin tekstimuotoista sisältöä kuvaavan attribuutin arvoina tulee olla enintään yksi LanguageString-tyyppinen arvo kutakin kielikoodia (```language```-attribuutti) kohti.
+Kunkin tekstimuotoista sisältöä kuvaavan attribuutin arvona tulee olla enintään yksi LanguageString-tyyppinen arvo kutakin kielikoodia (```language```-attribuutti) kohti.
 {% include common/clause_end.html %}
 
 #### Enimmäispituudet
@@ -65,21 +60,16 @@ Kunkin tekstimuotoista sisältöä kuvaavan attribuutin arvoina tulee olla enint
 Kunkin yhdellä kielellä annetun LanguageString-tyyppisen merkkijonon enimmäispituus on 2048 merkkiä.
 {% include common/clause_end.html %}
 
-{% include common/note.html content="Valittu 2048 merkin raja perustuu arvioon yksittäisten suunnitelmatekstien tyypillisistä pituuksista. Merkkijonojen enimmäispituuden määrääminen loogisen tietomallin tasolla on jossain määrin kajoamista mallin tekniseen toteutukseen, mutta yhteentoimivuuden takaamisen näkökulmasta on tärkeää, että kaikkissa fyysisissä tietomalleissa varataan yhtä suuri maksimimäärä merkkejä tekstisisältöjen tallentamiseen." %}
-
-<!-- Poistettu notesta lause "Muutoin on riskinä oikeusvaikuttteisen tiedon katoaminen tiedonsiirrossa tai -käsittelyproseseissa." -->
+{% include common/note.html content="Valittu 2048 merkin raja perustuu arvioon yksittäisten suunnitelmakohteiden kuvaustekstien tyypillisistä pituuksista. Merkkijonojen enimmäispituuden määrääminen loogisen tietomallin tasolla on jossain määrin kajoamista mallin tekniseen toteutukseen, mutta yhteentoimivuuden takaamisen näkökulmasta on tärkeää, että kaikkissa fyysisissä tietomalleissa varataan yhtä suuri maksimimäärä merkkejä tekstisisältöjen tallentamiseen. %}
 
 #### Tekstiarvojen käyttö
 
-Tekstimuotoisina annettujen suunnitelmatietojen ja niiden lisätietojen koneellinen tulkittavuus on monimutkaisempaa, epätäsmällisempää ja epäluotettavampaa kuin kuvattaessa sama ohjausvaikutus koodistojen arvojen tai numeeristen arvojen avulla. Tekstimuotoiset arvot ovat kuitenkin toisinaan tarpeen, koska kaikkia mahdollisia yksityiskohtaisia suunnitelmatietoja ei ole mielekästä koodittaa. Ihmisen tulee todennäköisesti aina tarkistaa tekstimuotoisten suunnitelmien tulkinta, mikä heikentää konetulkittavan suunnitelmatiedon käsittelytehokkuutta. Tämän vuoksi tekstimuotoisia suunnitelmatietojen ja niiden lisätietojen arvoja ei tule käyttää tarpeettomasti, esimerkiksi kuvaamaan uudelleen jo suunnitelmakoodin otsikkoon, määritelmään tai kuvaukseen sisältyvää sisältöä.
+Tekstimuotoisina annettujen suunnitelmatietojen ja niiden lisätietojen koneellinen tulkittavuus on monimutkaisempaa, epätäsmällisempää ja epäluotettavampaa kuin kuvattaessa sama ohjausvaikutus koodistojen arvojen tai numeeristen arvojen avulla. Tekstimuotoiset arvot ovat kuitenkin toisinaan tarpeen, koska kaikkia mahdollisia yksityiskohtaisia suunnitelmatietoja ei ole mielekästä koodittaa tai koodit eivät avaa riittävän yksityiskohtaisesti suunnitteluratkaisuun
+liittyvää sisältöä.
 
-<!-- {% include common/clause_start.html type="req" id="laatu/vaat-vain-tarpeelliset-tekstiarvot" %}
-Mikäli [Kaavamaarays](dokumentaatio/#kaavamaarays)- tai [Lisatieto](dokumentaatio/#lisatieto)-luokkien ```arvo```-attribuuteille on sallittu nollasta poikkeava määrä [TekstiArvo](dokumentaatio/#tekstiarvo)-tyyppisiä arvoja, tulee niitä käyttää ainoastaan tapauksissa, joissa teksti on välttämätön täydentämään kaavamääräyksen tai lisätiedon muiden attribuuttien avulla kuvattua merkitystä. Mikäli sama ohjausvaikutus saavutetaan myös jättämällä [TekstiArvo](dokumentaatio/#tekstiarvo)-tyyppinen arvo pois, ei sitä tule käyttää.
-{% include common/clause_end.html %}
+Ihmisen tulee todennäköisesti aina tarkistaa tekstimuotoisten suunnitelmien tulkinta, mikä heikentää konetulkittavan suunnitelmatiedon käsittelytehokkuutta. Tämän vuoksi tekstimuotoisia suunnitelmatietojen ja niiden lisätietojen arvoja ei tule käyttää tarpeettomasti, esimerkiksi sisällön toistamiseksi.
 
-{% include common/clause_start.html type="req" id="laatu/vaat-otsikointi-nimi" %}
-[Kaavamaarays](dokumentaatio/#kaavamaarays)-, [Kaavasuositus](dokumentaatio/#kaavasuositus)- ja [Kaavakohde](dokumentaatio/#kaavakohde)-luokkien instanssien mahdolliseen ei-oikeusvaikutteiseen otsikointiin tulee käyttää niiden ```nimi```-attribuutteja.
-{% include common/clause_end.html %} -->
+Kaupunkiseutusuunnitelman kontekstissa tekstiarvojen käyttö on tarpeen erityisesti suunnitelman sisältöjä, tavoitteita ja kehittämisperiaatteita kuvattaessa. Sisältöä kuvaavat tekstit voivat selittää ihmisluettavassa muodossa auki käytettyjä koodistoarvoja. Esimerkiksi kohteen toimintoa määrittelevät koodistot toimintolaji ja infrastruktuurilaji eivät välttämättä kuvaa riittävän täsmällisesti toiminnon sisältöä. Samoin tavoitteisiin ja kehittämisperiaatteisiin liittyvä sisältö saattaa jäädä koodeja käytettäessä suppeammaksi, kuin kokonaisuuden laaja-alainen ymmärtäminen vaatii.
 
 ### Geometriat
 
@@ -96,9 +86,6 @@ Viivamaiset geometriat toteuttavat ISO 19107 -standardin määrittelemän ```Cur
 Aluemaiset geometriat toteuttavat ISO 19107 -standardin määrittelemän ```Surface```-rajapinnan.
 {% include common/clause_end.html %}
 
-<!-- {% include common/clause_start.html type="req" id="laatu/vaat-geom-3d-kappale-maar" %}
-3-ulotteiset kappalegeometriat toteuttavat joko ISO 19107 -standardin määrittelemän ```Solid```-rajapinnan.
-{% include common/clause_end.html %} -->
 {% include common/clause_start.html type="req" id="laatu/vaat-geom-kokoelmat-maar" %}
 Geometriakokoelmat toteuttavat ISO 19107 -standardin määrittelemän ```Collection```-rajapinnan. Monipiste (multipoint) -geometriat rakentuvat ```Point```-rajapinnan, moniviiva (multicurve) -geometriat ```Curve```-rajapinnan, monialue (multisurface) -geometriat ```Surface```-rajapinnan ja monikappale (multisolid) -geometriat ```Solid```-rajapinnan toteuttavista osista (```element```-attribuutti).
 {% include common/clause_end.html %}
@@ -111,7 +98,6 @@ Rakennetun ympäristön tietojärjestelmä tukee seuraavia koordinaatistoja:
 
 Tiedon luovutuksen koordinaatistot
 * EPSG:4326, WGS84
-<!--  * Käytössä myös IFC-mallissa -->
 * EPSG:3857, Google Web Mercator
 * Tiedon luovutusrajapinnan käyttäjä voi pyytää vastauksen haluamassaan tuetussa koordinaatistossa, jolloin tietojärjestelmä muuntaa tarvittaessa varannossa olevan tiedon haluttuun kohdekoordinaatistoon.
 
@@ -159,7 +145,7 @@ Aluemaisten geometrioiden kiertosuuntien tulee noudattaa ISO 19107 -standardin m
 
 
 
-### Päivämäärät ja kelloanajat
+### Päivämäärät ja kellonajat
 Kaupunkiseutusuunnitelman tietomallin yksittäisiä ajanhetkiä kuvaavat attribuutit ovat ISO 19108 -standardin määrittämää tyyppiä [TM_Instant](dokumentaatio/#tm_instant) ja aikavälejä kuvaavat attribuutit tyyppiä [TM_Period](dokumentaatio/#tm_period). Päivämäärät annetaan käyttäen Gregoriaanista kalenteria ja kellonajat käyttäen 24 tunnin kelloaikamuotoa alkaen kellonajasta 00:00:00.000  ja päättyen ajanhetkeen 23:59:59.999 (tunti, minuutti, sekunti, millisekunti).
 
 {% include common/clause_start.html type="req" id="laatu/vaat-ajanhetki-tarkkuus" %}
@@ -190,17 +176,7 @@ Aikavälejä kuvaavat attribuutit voidaan antaa joko sekä alku- että loppuajan
 [Lahtotietoaineisto](dokumentaatio/#lahtotietoaineisto)-luokan objektien ```aluerajaus```-attribuutin arvon tulee kuvata aineiston maantieteellinen kattavuus joko [aluemaisena geometriana](#laatu-vaat-geom-2d-alue-maar) tai [monialueena](#laatu-vaat-geom-kokoelmat-maar).
 {% include common/clause_end.html %}
 
-<!-- ### KaavanKumoamistieto
-{% include common/clause_start.html type="req" id="laatu/vaat-lahtotietoaineisto-aluerajaus-geometria" %}
-[KaavanKumoamistieto](dokumentaatio/#kaavankumoamistieto)-luokan objektien ```kumottavanKaavanAlue```-attribuutin arvon tulee kuvata kumottava alue joko [aluemaisena geometriana](#laatu-vaat-geom-2d-alue-maar) tai [monialueena](#laatu-vaat-geom-kokoelmat-maar).
-{% include common/clause_end.html %} -->
-
 ### Kaupunkiseutusuunnitelma
-<!--
-{% include common/clause_start.html type="req" id="laatu/vaat-alueidenkayttojarakentamispaatos-paallekkaiset-voimassaoloajat" %}
-Kaupunkiseutusuunnitelman tietovarastossa ei tule olla kahta [AlueidenkäyttöJaRakentamispaatos](dokumentaatio/#alueidenkäyttöjarakentamispaatos)-luokan objektia, joiden 
-* ```voimassaoloAika```-attribuutin arvojen kuvaamat aikavälit ovat sisäkkäisiä tai lomittain.
-{% include common/clause_end.html %} -->
 
 {% include common/clause_start.html type="req" id="laatu/vaat-alueidenkayttojarakentamisasia-paallekkaiset-aluerajaukset" %}
 Kaupunkiseutusuunnitelman tietovarastossa ei tule olla kahta [AlueidenkäyttöJaRakentamisasia](dokumentaatio/#alueidenkäyttöjarakentamisasia)-luokan objektia, joiden 
@@ -230,17 +206,5 @@ Kaupunkiseutusuunnitelman tietovarastossa ei tule olla kahta [AlueidenkäyttöJa
 ### Suunnitelmakohde
 
 {% include common/clause_start.html type="req" id="laatu/vaat-suunnitelmakohde-geometria" %}
-[Suunnitelmakohde](dokumentaatio/#suunnitelmakohde)-luokan objektin ```geometria```-attribuutin arvon tulee olla [piste](#laatu-vaat-geom-piste-maar), [viiva](#laatu-vaat-geom-viiva-maar), [alue](#laatu-vaat-geom-2d-alue-maar),<!-- [3-ulotteinen kappale](#laatu-vaat-geom-3d-kappale-maar),--> [moniviiva, monialue tai monikappale](#laatu-vaat-geom-kokoelmat-maar).
+[Suunnitelmakohde](dokumentaatio/#suunnitelmakohde)-luokan objektin ```geometria```-attribuutin arvon tulee olla [piste](#laatu-vaat-geom-piste-maar), [viiva](#laatu-vaat-geom-viiva-maar), [alue](#laatu-vaat-geom-2d-alue-maar), [moniviiva, monialue tai monikappale](#laatu-vaat-geom-kokoelmat-maar).
 {% include common/clause_end.html %}
-
-<!--
-{% include common/clause_start.html type="req" id="laatu/vaat-suunnitelmakohde-3d-konsistenssi" %}
-Mikäli [Suunnitelmakohde](dokumentaatio/#suunnitelmakohde)-luokan objektin ```geometria```-attribuutin arvo on [3-ulotteinen kappale](#laatu-vaat-geom-3d-kappale-maar) tai [monikappale](#laatu-vaat-geom-kokoelmat-maar), ja sille on annettu ```pystysuuntainenRajaus```-attribuutti, tulee ```geometria```-attribuutin arvon sijaita pystysuuntaisen rajauksen määrittämien korkeuksien ala- ja ylärajojen väleissä. 
-{% include common/clause_end.html %}
-
- {% include common/clause_start.html type="req" id="laatu/vaat-paallekkaiset-kaavakohteet" %}
-Kaupunkiseutusuunnitelman tietovarastossa ei tule olla kahta [Suunnitelmakohde](dokumentaatio/#suunnitelmakohde)-luokan objektia, joiden
-* ```kaava```-attribuutin arvo viittaavat eri kaavoihin, 
-* ```voimassaoloAika```-attribuutin arvojen kuvaamat aikavälit ovat sisäkkäisiä tai lomittain, ja
-* ```geometria```- ja ```pystysuuntainenRajaus```-attribuuttien yhdessä kuvaavat geometriat leikaavat toisiaan tai ovat sisäkkäisiä.
-{% include common/clause_end.html %} -->

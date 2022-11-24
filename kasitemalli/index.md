@@ -220,23 +220,14 @@ status: "Ehdotus"
     note="Abstrakti aktiviteetti voi olla esim. maankäyttö tai virkistys, konkreettinen voi olla esim. pyöräily tai jalankulku. Käsitemääritelmä muodostaa parin infrastruktuurilajin määritelmän kanssa."
 %}
 
-### Suunnitelman elinkaaren tila
-
-{% include common/definitionref.html 
-    dict="kss"
-    dictname="Kaupunkiseutusuunnitelma"
-    id="concept-5" 
-    name="suunnitelman elinkaaren tila" 
-    def="tieto kaupunkiseutusuunnitelmille määritellyn elinkaarikoodiston mukaisesta tilasta, jossa liittyvä suunnitelman versio on."
-%}
-
 ### Kaupunkiseutusuunnitelman hyväksymispäätös
 
 {% include common/definitionref.html 
     dict="kss"
     dictname="Kaupunkiseutusuunnitelma"
-    id="concept-4" 
-    name="Hallintopäätös, jolla kaupunkiseutusuunnitelma hyväkstytään. Hyväksymispäätös voidaan tehdä kuntien yhteisessä toimielimessä tai erikseen kaupunkiseudun kunnissa, tai jollain muulla kaupunkiseudun kuntien sopimalla tavalla."
+    id="concept-4"
+    name="Kaupunkiseutusuunnitelman hyväksymispäätös"
+    def="Hallintopäätös, jolla kaupunkiseutusuunnitelma hyväkstytään. Hyväksymispäätös voidaan tehdä kuntien yhteisessä toimielimessä tai erikseen kaupunkiseudun kunnissa, tai jollain muulla kaupunkiseudun kuntien sopimalla tavalla."
 %}
 
 ### Elinkaaren tila

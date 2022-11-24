@@ -33,6 +33,7 @@ status: "Ehdotus"
     id="concept-10" 
     name="kaupunkiseutusuunnittelun teema" 
     def="kaupunkiseutusuunnittelun sovitun yhteisen aihepiiriluokittelun mukainen luokka, jonka perusteella kaupunkiseutusuunnitelmien aineistoja voidaan tarkastella teemoittain."
+    note="esim. yhdyskuntarakenne, liikennejärjestelmä tai asuminen"
 %}
 
 ### Vuorovaikutussuunnitelma
@@ -42,7 +43,7 @@ status: "Ehdotus"
     dictname="Kaupunkiseutusuunnitelma"
     id="concept-34" 
     name="vuorovaikutussuunnitelma" 
-    def="suunnitelma, jossa kuvataan kaupunkiseutusuunnitelman laadinta- ja hyväksymisprosessiin kuuluvat vuorovaikutusmuodot."
+    def="suunnitelma, jossa kuvataan kaupunkiseutusuunnitelman laadintaan ja hyväksymisprosessiin kuuluvat vuorovaikutusmenettelyt."
 %}
 
 ### Suunnitelman selostus
@@ -55,14 +56,15 @@ status: "Ehdotus"
     def="kaupunkiseutusuunnitelmaan liittyvä selostus, jossa esitetään suunnitelman tavoitteiden ja toimenpiteiden sekä niiden vaikutusten ja perusteiden arvioimiseksi tarpeelliset tiedot."
 %}
 
-### Suunnitelman kohde
+### Suunnitelmakohde
 
 {% include common/definitionref.html 
     dict="kss"
     dictname="Kaupunkiseutusuunnitelma"
     id="concept-14" 
-    name="suunnitelman kohde" 
-    def="sijainnillinen kohde, johon suunnitelman tavoitteita ja toimenpiteitä ja toimintoja voidaan kohdistaa."
+    name="suunnitelmakohde" 
+    def="skaupunkiseutusuunnitelmaan sisältyvä sijainnillinen aluerajaus tai kohde, jonka alueen maankäyttöön, asumiseen, liikenteeseen tai muuhun teemaan liittyviä tavoitteita, kehittämisperiaatteita tai toimenpiteitä halutaan osoittaa."
+    note="geometria voi olla piste-, viiva- tai aluemainen. Sijainin tulkintatapa voi olla topologinen (esim. yhteystarve kahden keskuksen välillä symbolina kartalla) tai maantieteellinen (tielinjaus kartalla). Kohde on kehittämiskohde, jos siihen liittyy vähintään yksi suunnitelman kehittämistoimenpide tai tavoite."
 %}
 
 ### Kehittämisperiaate
@@ -73,6 +75,7 @@ status: "Ehdotus"
     id="concept-1001" 
     name="kehittämisperiaate" 
     def="kehittämistä tai suunnittelua ohjaava näkemys tai linjaus suunnitelman tavoitteiden saavuttamiseksi."
+    note="Kehittämisperiaate voi liittyä yhteen tai useampaan kaupunkiseutusuunnittelun teemaan."
 %}
 
 
@@ -83,7 +86,8 @@ status: "Ehdotus"
     dictname="Kaupunkiseutusuunnitelma"
     id="concept-6" 
     name="tavoite" 
-    def="kaupunkiseutusuunnitelman päämäärä, joka voi liittyä joko koko suunnitelmaan tai sen yksittäisiin kohteisiin."
+    def="kaupunkiseutusuunnitelman tavoitteellinen lopputulos (esim. tavoiteltu asukasmäärä), joka voi liittyä joko koko suunnitelmaan tai sen yksittäisiin suunnitelmakohteisiin."
+    note="Tavoite voi olla tasoltaan strateginen tai konkreettinen. Konkreettisten tavoitteiden saavuttamista voidaan mitata mittarien avulla ja niille voidaan määrittää lähtötilanteen ja tavoitteen saavuttamisen mukaisen suureen arvot. Tavoite voidaan liittää yhteen tai useampaan kaupunkiseutusuunnittelun teemaan."
 %}
 
 ### Tavoitteen lähtötilan mittaus
@@ -93,7 +97,8 @@ status: "Ehdotus"
     dictname="Kaupunkiseutusuunnitelma"
     id="concept-1000" 
     name="tavoitteen lähtötilan mittaus" 
-    def="mittaustapahtuma, jolla määritetään mitattavaan tavoitteeseen valitun suureen arvo"
+    def="mittaustapahtuma, jolla määritetään mitattavaan tavoitteeseen valitun suureen arvo lähtötilanteessa."
+    note="esim. asukasmäärä lähtötilanteessa"
 %}
 
 ### Seudullinen tietoaineisto
@@ -135,6 +140,7 @@ status: "Ehdotus"
     id="concept-20" 
     name="mittaustapahtuma" 
     def="aktiviteetti jonkin suureen arvon mittaamiseksi."
+    note="sisältää tiedon tehdyn mittauksen ajankohdasta ja muista tapahtumaa kuvaavista tiedoista."
 %}
 
 ### Mittari
@@ -144,7 +150,8 @@ status: "Ehdotus"
     dictname="Kaupunkiseutusuunnitelma"
     id="concept-21" 
     name="mittari" 
-    def="hyvin määritely instrumentti tai menetelmä mitata tai arvioida jonkin suureen arvo. "
+    def="hyvin määritely instrumentti tai menetelmä mitata tai arvioida jonkin suureen arvo."
+    note="esimerkiksi menetelmä mitata väestömäärä tai kerrosalan määrä"
 %}
 
 
@@ -159,15 +166,26 @@ status: "Ehdotus"
 %}
 
 
-### Kohteen toiminto
+### Suunnnitelmakohteen toiminto
 
 {% include common/definitionref.html 
     dict="kss"
     dictname="Kaupunkiseutusuunnitelma"
     id="concept-7" 
-    name="kohteen toiminto" 
+    name="suunnitelmakohteen toiminto" 
     def="suunnitelman kohteeseen liittyvä inhimillinen aktiviteetti ja sitä tukeva ympäristö- tai infrastruktuuriratkaisu"
+    note="Esim. liikenneväylä, liiketoimintojen keskittymä, työpaikkavaltainen alue, raideliikenteen seisake jne. Toimenpiteen laji voidaan liittää yhteen tai useampaan kaupunkiseutusuunnittelun teemaan. Toiminto voi olla suunnitelman laadintahetkellä säilytettävä, uusi, kehitettävä tai väistyvä."
 %}
+
+### Suunnitelmakohteen elinkaarimuutoksen tyyppi
+
+{% include common/definitionref.html 
+    dict="kss"
+    dictname="Kaupunkiseutusuunnitelma"
+    id="concept-2000" 
+    name="suunnitelmakohteen elinkaarimuutoksen tyyppi" 
+    def="tieto suunnitelmakohteeseen liittyvän toiminnon elinkaaren tilasta."
+    note="Esimerkiksi olemassa oleva, kehitettävä, uusi, poistetuva, purettu"
 
 ### Toiminnon infrastruktuurilaji
 
@@ -177,6 +195,7 @@ status: "Ehdotus"
     id="concept-1004" 
     name="toiminnon infrastruktuurilaji" 
     def="kaupunkiseutusuunnitelman kohteeseen liittyvän toiminnon abstrakti tai konkreettinen infrastruktuuritaso"
+    note="Abstrakti infrastruktuuritaso voi olla esim. vyöhyke, suunta tai yhteys, konkreettinen infrastruktuuritaso voi olla esim. alue, asema tai tie. Infrastruktuurilaji muodostaa käsitteellisen parin toimintolajin määritelmän kanssa."
 %}
 
 ### Toiminnon kehittämisperiaate
@@ -186,27 +205,28 @@ status: "Ehdotus"
     dictname="Kaupunkiseutusuunnitelma"
     id="concept-1002" 
     name="toiminnon kehittämisperiaate" 
-    def="kaupunkiseutusuunnitelman kohteessa olevan toiminnon kehittämistä tai suunnittelua ohjaava näkemys tai linjaus"
+    def="suunnitelmakohteessa olevan toiminnon kehittämistä tai suunnittelua ohjaava näkemys tai linjaus."
 %}
 
-### Toiminnon toimintolaji
+### Toimintolaji
 
 {% include common/definitionref.html 
     dict="kss"
     dictname="Kaupunkiseutusuunnitelma"
     id="concept-1003" 
-    name="toiminnon toimintolaji" 
-    def="kaupunkiseutusuunnitelman kohteeseen liittyvän toiminnon abstraktin tai konkreettisen inhimillisen aktiviteettiin laji"
+    name="Toimintolaji" 
+    def="Suunnitelmakohteeseen liittyvän toiminnon abstraktin tai konkreettisen inhimillisen aktiviteettiin laji."
+    note="Abstrakti aktiviteetti voi olla esim. maankäyttö tai virkistys, konkreettinen voi olla esim. pyöräily tai jalankulku. Käsitemääritelmä muodostaa parin infrastruktuurilajin määritelmän kanssa."
 %}
 
-### Suunnitelman elinkaaren vaihe
+### Suunnitelman elinkaaren tila
 
 {% include common/definitionref.html 
     dict="kss"
     dictname="Kaupunkiseutusuunnitelma"
     id="concept-5" 
-    name="suunnitelman elinkaaren vaihe" 
-    def="tieto kaupunkiseutusuunnitelmille määritellyn elinkaarikoodiston mukaisesta vaiheesta, jossa liittyvä suunnitelman versio on"
+    name="suunnitelman elinkaaren tila" 
+    def="tieto kaupunkiseutusuunnitelmille määritellyn elinkaarikoodiston mukaisesta tilasta, jossa liittyvä suunnitelman versio on."
 %}
 
 ### Kaupunkiseutusuunnitelman hyväksymispäätös
@@ -215,18 +235,18 @@ status: "Ehdotus"
     dict="kss"
     dictname="Kaupunkiseutusuunnitelma"
     id="concept-4" 
-    name="kaupunkiseutusuunnitelman hyväksymispäätös" 
-    def="hallintopäätös, jolla hyväksytään laadittu yhteinen kaupunkiseutusuunnitelma sen yhden laatijaorganisaation puolesta"
+    name="Hallintopäätös, jolla kaupunkiseutusuunnitelma hyväkstytään. Hyväksymispäätös voidaan tehdä kuntien yhteisessä toimielimessä tai erikseen kaupunkiseudun kunnissa, tai jollain muulla kaupunkiseudun kuntien sopimalla tavalla."
 %}
 
-### Kohteen elinkaaren vaihe
+### Elinkaaren tila
 
 {% include common/definitionref.html 
     dict="kss"
     dictname="Kaupunkiseutusuunnitelma"
     id="concept-28" 
-    name="kohteen elinkaaren vaihe" 
-    def="tieto suunnitelman kohteen elinkaaren vaiheesta kaupunkiseutusuunnitelman laadinnan aikaan "
+    name="elinkaaren tila" 
+    def="tieto kaupunkiseutusuunnitelman tai kaupunkiseutusuunnitelman suunnitelmakohteen elinkaaren tilasta kaupunkiseutusuunnitelman laadinnan aikaan"
+    note="esim. valmistelu, luonnos, ehdotus, hyväksytty, kumoutunut"
 %}
 
 ### Suunnitelman osallinen
@@ -236,7 +256,7 @@ status: "Ehdotus"
     dictname="Kaupunkiseutusuunnitelma"
     id="concept-33" 
     name="suunnitelman osallinen" 
-    def="oikeussubjekti, jonka toimintaan suunnitelman toimenpiteet, tavoitteet tai toiminnot liittyvät suoraan tai epäsuorasti"
+    def="osallisia ovat ne, joiden oloihin tai etuihin suunnitelma saattaa huomattavasti vaikuttaa kuten suunnittelualueen maanomistajat, asukkaat ja muut ympäristön käyttäjät sekä viranomaiset ja yhteisöt, joiden toimialaa suunnittelu koskee."
 %}
 
 ### Suunnitelman hyväksyjä
@@ -277,6 +297,7 @@ status: "Ehdotus"
     id="concept-29" 
     name="käsittelytapahtuma" 
     def="suunnitelman käsittelyprosessiin kuuluva tapahtuma, jonka johdosta suunnitelman elinkaaren tila voi muuttua."
+    note="esim. suunnittelun käynnistäminen, luonnoksen nähtäville asettaminen, hyväksyminen, suunnittelun keskeyttäminen"
 %}
 
 
@@ -318,7 +339,7 @@ status: "Ehdotus"
     dictname="Kaupunkiseutusuunnitelma"
     id="concept-9" 
     name="kehittämistarve" 
-    def="tunnistettu konkreettinen tarve kehittää joitain kaupunkiseudun tai sen osien piirteitä"
+    def="kaupunkiseudun suunnittelussa tunnistettu tarve kehittää esimerkiksi kaupunkiseudun yhdyskuntarakennetta, liikennejärjestelmää tai viherrakennetta"
 %}
 
 ### Strateginen linjaus
@@ -328,7 +349,8 @@ status: "Ehdotus"
     dictname="Kaupunkiseutusuunnitelma"
     id="concept-8" 
     name="strateginen linjaus" 
-    def="strateginen päätös, joka ohjaa kaupunkiseutusuunnitelman laadintaa yleisellä tasolla "
+    def="strateginen päätös, joka ohjaa kaupunkiseutusuunnitelman laadintaa yleisellä tasolla."
+    note="esimerkiksi seutustrategia tai seudun asuntopoliittinen ohjelma"
 %}
 
 ### Ulkoinen trendi
@@ -338,7 +360,8 @@ status: "Ehdotus"
     dictname="Kaupunkiseutusuunnitelma"
     id="concept-0" 
     name="ulkoinen trendi" 
-    def="kaupunkiseutuun vaikuttava yhteiskunnallinen kehityssuunta, joka on otettava huomioon kaupunkiseutusuunnitelmassa, mutta johon suunnitelman toteuttamisella ei juurikaan voida vaikuttaa"
+    def="kaupunkiseutuun vaikuttava yhteiskunnallinen kehityssuunta tai laajemmin toimintaympäristöön vaikuttava ilmiö, joka on otettava huomioon kaupunkiseutusuunnitelmassa."
+    note="esim. ilmastonmuutos tai kaupungistuminen"
 %}
 
 ### Seurannan käsitteet
@@ -361,6 +384,7 @@ status: "Ehdotus"
     id="concept-25" 
     name="tavoitteen toteuma" 
     def="mittaus ja sen tulos tai muu tietyllä ajanhetkellä tehty arvio tietyn kaupunkiseutusuunnitelman tavoitteen saavuttamisesta."
+    note="esimerkiksi asuntotuotantotavoiteen tai kaupunkiseudun vetovoiman parantamisen mitattu tai arvioitu toteuma"
 %}
 
 #### Kehittämistoimenpide
@@ -371,16 +395,7 @@ status: "Ehdotus"
     id="concept-15" 
     name="kehittämistoimenpide" 
     def="yhteen tai useampaan suunnitelman kohteeseen liittyvä tehtävä suunnitelman tavoitteiden saavuttamiseksi."
-%}
-
-#### Toimenpiteen toteutusaikataulu
-
-{% include common/definitionref.html 
-    dict="kss"
-    dictname="Kaupunkiseutusuunnitelma"
-    id="concept-17" 
-    name="toimenpiteen toteutusaikataulu" 
-    def="sarja aikamääreitä, joihin mennessä toimenpide tai sen osa on määrä saada tehtyä"
+    note="Toimenpide voidaan liittää yhteen tai useampaan kaupunkiseutusuunnittelun teemaan."
 %}
 
 #### Toimenpiteen tila
@@ -410,7 +425,7 @@ status: "Ehdotus"
     dictname="Kaupunkiseutusuunnitelma"
     id="concept-26" 
     name="kaupunkiseudun kehittämisen tilannekuva" 
-    def="koottu kuvaus kaupunkiseudulla vallitsevista olosuhteista, käsillä olevan tilanteen synnyttäneistä tapahtumista, tilannetta koskevista taustatiedoista ja tilanteen kehittymistä koskevista arvioista sekä eri toimijoiden toimintavalmiuksista."
+    def="kuvaus kaupunkiseudun nykytilasta, siihen johtaneesta kehityksestä sekä muutosajureista."
 %}
 
 #### Seuranta-aineisto

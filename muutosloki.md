@@ -6,6 +6,10 @@ id: "muutosloki"
 # Muutosloki
 {:.no_toc}
 
+## 24.11.2022
+
+* Päivitetty käsitemallin kuvus vastaamaan Y-alustan Kaupunkiseutusuunnitelma-sanostoa.
+ 
 ## 27.10.2022
 
 * Lisätty uusi tietotyyppiluokka TavoitteenLähde.

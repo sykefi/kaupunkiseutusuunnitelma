@@ -186,6 +186,7 @@ status: "Ehdotus"
     name="suunnitelmakohteen elinkaarimuutoksen tyyppi" 
     def="tieto suunnitelmakohteeseen liittyvän toiminnon elinkaaren tilasta."
     note="Esimerkiksi olemassa oleva, kehitettävä, uusi, poistetuva, purettu"
+%}
 
 ### Toiminnon infrastruktuurilaji
 

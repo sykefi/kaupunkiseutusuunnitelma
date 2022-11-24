@@ -2,7 +2,7 @@
 layout: "default"
 description: ""
 id: "laatusaannot"
-status: "Keskeneräinen"
+status: "Ehdotus"
 ---
 
 # Laatusäännöt

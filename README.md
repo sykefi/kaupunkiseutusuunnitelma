@@ -1,2 +1,3 @@
 # Kaupunkiseutusuunnitelman tietomalli
 
+Kaupunkiseutusuunnitelmat ovat kaupunkiseudun kuntien yhdessä laatimia ja hyväksymiä strategisia suunnitelmia kaupunkiseudun kehittämisestä.

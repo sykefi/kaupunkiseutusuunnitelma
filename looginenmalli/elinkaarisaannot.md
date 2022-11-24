@@ -2,7 +2,7 @@
 layout: "default"
 description: ""
 id: "elinkaarisaannot"
-status: "Keskeneräinen"
+status: "Ehdotus"
 ---
 
 # Elinkaarisäännöt

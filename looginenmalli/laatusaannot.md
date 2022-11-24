@@ -60,7 +60,7 @@ Kunkin tekstimuotoista sisältöä kuvaavan attribuutin arvona tulee olla enint�
 Kunkin yhdellä kielellä annetun LanguageString-tyyppisen merkkijonon enimmäispituus on 2048 merkkiä.
 {% include common/clause_end.html %}
 
-{% include common/note.html content="Valittu 2048 merkin raja perustuu arvioon yksittäisten suunnitelmakohteiden kuvaustekstien tyypillisistä pituuksista. Merkkijonojen enimmäispituuden määrääminen loogisen tietomallin tasolla on jossain määrin kajoamista mallin tekniseen toteutukseen, mutta yhteentoimivuuden takaamisen näkökulmasta on tärkeää, että kaikkissa fyysisissä tietomalleissa varataan yhtä suuri maksimimäärä merkkejä tekstisisältöjen tallentamiseen". %}
+{% include common/note.html content="Valittu 2048 merkin raja perustuu arvioon yksittäisten suunnitelmakohteiden kuvaustekstien tyypillisistä pituuksista. Merkkijonojen enimmäispituuden määrääminen loogisen tietomallin tasolla on jossain määrin kajoamista mallin tekniseen toteutukseen, mutta yhteentoimivuuden takaamisen näkökulmasta on tärkeää, että kaikkissa fyysisissä tietomalleissa varataan yhtä suuri maksimimäärä merkkejä tekstisisältöjen tallentamiseen." %}
 
 #### Tekstiarvojen käyttö
 
